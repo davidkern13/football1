@@ -1,21 +1,50 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { View, Button, StatusBar } from 'react-native';
+import { createDrawerNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
+import HomeScreen from './project/screens/HomeScreen';
+import MatchesScreen from './project/screens/MatchesScreen';
+import TablesScreen from './project/screens/TablesScreen';
+import ScorersScreen from './project/screens/ScorersScreen';
+
+const STATUSBAR_HEIGHT = StatusBar.currentHeight;
+
+class MyNotificationsScreen extends React.Component {
+  static navigationOptions = {
+    drawerLabel: 'Notifications',
+  };
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Big Five +</Text>
-      </View>
+        <View style={{ flex: 1, justifyContent: 'center' }}>
+          <Button
+              onPress={() => this.props.navigation.goBack()}
+              title="Go back home"
+          />
+        </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+const BottomNavigator = createBottomTabNavigator(
+    {
+      Matches: MatchesScreen,
+      Tables: TablesScreen,
+      Scorers: ScorersScreen,
+    }
+);
+
+const MyApp = createDrawerNavigator({
+  BottomNavigator: {
+    screen: BottomNavigator,
+  },
+  Home: {
+    screen: HomeScreen,
+  },
+  Notifications: {
+    screen: MyNotificationsScreen,
   },
 });
+
+export default createAppContainer(MyApp);
+
