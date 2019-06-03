@@ -1,15 +1,18 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Platform, Button, StyleSheet, Text, View, StatusBar} from 'react-native';
+import MatchesBox from './matches/Matches.box.js'
+
+const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
 
 export default class MatchesScreen extends React.Component {
+    
     render() {
         return (
             <View style={styles.container}>
-                <Text>MatchesScreen</Text>
-                <Button
-                    onPress={() => this.props.navigation.openDrawer()}
-                    title="Open Drawer"
-                />
+               <MatchesBox team1='Argentina' team2='Bolivia' scoreTeam1='2' scoreTeam2='1' round='1' group='A' date='Sat 15/06/2019 03:30'/>
+               <MatchesBox team1='Qatar' team2='Japan' scoreTeam1='5' scoreTeam2='2' round='1' group='A' date='Sat 15/06/2019 03:30'/>
+               <MatchesBox team1='Venezuela' team2='Columbia' scoreTeam1='3' scoreTeam2='7' round='1' group='B' date='Sat 15/06/2019 03:30'/>
+               <MatchesBox team1='Brazil' team2='Peru' scoreTeam1='0' scoreTeam2='0' round='1' group='C' date='Sat 15/06/2019 03:30'/>
             </View>
         );
     }
@@ -18,11 +21,9 @@ export default class MatchesScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        marginTop:40,
+        display:'flex',
+        flexDirection:'column',
+        backgroundColor: 'lightgray',
     },
-    text: {
-        fontSize: 30,
-    }
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
+
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
         drawerLabel: 'Home',
@@ -13,12 +14,10 @@ export default class HomeScreen extends React.Component {
                     onPress={() => this.props.navigation.navigate('Notifications')}
                     title="Go to notifications"
                 />
-
                 <Button
                     onPress={() => this.props.navigation.openDrawer()}
                     title="Open Drawer"
                 />
-
             </View>
         );
     }

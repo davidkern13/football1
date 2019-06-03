@@ -1,15 +1,14 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
+import Group from './table/Group.table.js';
 
 export default class TablesScreen extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>TablesScreen</Text>
-                <Button
-                    onPress={() => this.props.navigation.openDrawer()}
-                    title="Open Drawer"
-                />
+            <View style={styles.container}>    
+               <Group group='A' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
+               <Group group='B' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
+               <Group group='C' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
             </View>
         );
     }
@@ -17,10 +16,12 @@ export default class TablesScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex:1,
+        display: 'flex',
+        flexDirection:'column',
         backgroundColor: '#fff',
-        alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor:'lightgray'
     },
     text: {
         fontSize: 30,
