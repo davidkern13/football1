@@ -10,7 +10,14 @@ import { SafeAreaView, StatusBar, Platform } from 'react-native';
 
 class MyNotificationsScreen extends React.Component {
   static navigationOptions = {
-    drawerLabel: 'Notifications',
+      title: 'Home',
+      headerStyle: {
+          backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+          fontWeight: 'bold',
+      },
   };
 
   render() {
