@@ -1,0 +1,5 @@
+1. Store folder include the redux
+2. For create a new redux follow the next steps
+3. Create new folder with name of your issue
+4. Inside your issue folder create actions&reducers JS file
+5. EnJoy your redux

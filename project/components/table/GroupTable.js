@@ -1,9 +1,9 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
-import TeamRow from './TeamRow.table.js';
-import TeamRow1 from './TeamRow.table1.js';
-import TeamRow3 from './TeamRow.table3.js';
-import TeamRow4 from './TeamRow.table4.js';
+import TeamRow from './TeamRowTable.js';
+import TeamRow1 from './TeamRowTable1.js';
+import TeamRow3 from './TeamRowTable3.js';
+import TeamRow4 from './TeamRowTable4.js';
 
 export default class Group extends React.Component {
   
@@ -32,7 +32,6 @@ export default class Group extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
         flexDirection:'column',
         marginTop:2,
         backgroundColor:'white',

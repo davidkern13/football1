@@ -4657,6 +4657,11 @@ react-native-redux-listener@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-native-redux-listener/-/react-native-redux-listener-0.3.0.tgz#6ff3eabba756f03fd4c1df355c8587e9aec2c0e1"
 
+react-native-responsive-image@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-responsive-image/-/react-native-responsive-image-2.3.1.tgz#3f8d3882061a8eae389d70a960e3e6436da9e354"
+  integrity sha512-I9/Z5uz60qGLXZ69wWd0P6pIB4SfMX94s66NvNttJjqP1MsK1LBD0wSP4Wj4sCNQk8uz08SvagFnQ9MOREHyPg==
+
 react-native-router-flux@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/react-native-router-flux/-/react-native-router-flux-4.0.6.tgz#e4723f5ce89cb5822e0c9bb6d0a8d4de6179eb58"

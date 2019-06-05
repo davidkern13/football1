@@ -1,6 +1,6 @@
 import React from 'react';
 import {Platform, Button, StyleSheet, Text, View, StatusBar} from 'react-native';
-import MatchesBox from './matches/Matches.box.js'
+import MatchesBox from '../components/matches/MatchesBox'
 
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
 

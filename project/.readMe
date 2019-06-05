@@ -1,0 +1,6 @@
+1. Project folder started from little digit
+2. Component File Started from Capital Digit, if its more the one word the next word is same started from Capital Digit
+   --For example--
+   HomeComponent.js
+2.1 Component write in component folder
+3. The new folder store, utils the file started from little digit
