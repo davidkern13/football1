@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View, Image,TouchableHighlight,} from 'react-native';
+import {Button, StyleSheet, Text, View, Image,} from 'react-native';
 
 
 export default class TeamRow extends React.Component {

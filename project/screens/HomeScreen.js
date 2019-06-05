@@ -3,13 +3,21 @@ import {Button, StyleSheet, Text, View} from 'react-native';
 
 
 export default class HomeScreen extends React.Component {
-    static navigationOptions = {
-        drawerLabel: 'Home',
-    };
+    static navigationOptions = {  
+        title: 'Home',  
+        headerStyle: {  
+            backgroundColor: '#f4511e',  
+        },  
+        headerTintColor: '#0ff',  
+        headerTitleStyle: {  
+           fontWeight: 'bold',  
+        },  
+        
+    };  
 
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: 'center' }}>
+            <View style={styles.container}>
                 <Button
                     onPress={() => this.props.navigation.navigate('Notifications')}
                     title="Go to notifications"
@@ -30,7 +38,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    text: {
-        fontSize: 30,
-    }
 });

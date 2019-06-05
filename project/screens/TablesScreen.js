@@ -1,15 +1,18 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View, ScrollView} from 'react-native';
 import Group from './table/Group.table.js';
 
 export default class TablesScreen extends React.Component {
     render() {
         return (
-            <View style={styles.container}>    
-               <Group group='A' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
-               <Group group='B' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
-               <Group group='C' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
-            </View>
+            <ScrollView>
+                <View style={styles.container}>    
+                    <Group group='A' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
+                    <Group group='B' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
+                    <Group group='C' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
+                </View>
+            </ScrollView>
+            
         );
     }
 }
