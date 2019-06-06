@@ -32,7 +32,6 @@ export default class ScorersScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop:30,
         display:'flex',
         flexDirection:'column',
         backgroundColor:'lightgray'

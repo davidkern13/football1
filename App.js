@@ -13,7 +13,8 @@ import TablesScreen from './project/screens/TablesScreen';
 import ScorersScreen from './project/screens/ScorersScreen';
 import NewsScreen from './project/screens/NewsScreen';
 import SettingsScreen from "./project/screens/SettingsScreen";
-import StatisticsScreen from "./project/screens/StatisticsScreen"
+import StatisticsScreen from "./project/screens/StatisticsScreen";
+import HomeScreen from "./project/screens/HomeScreen";
 
 const BottomNavigator = createBottomTabNavigator(
     {
@@ -39,6 +40,7 @@ const App = createStackNavigator({
 
 const MyApp = createDrawerNavigator({
     Home: { screen: App},
+    HomePage: { screen: HomeScreen},
     News: { screen: NewsScreen},
     Matches: { screen: MatchesScreen},
     Table: { screen: TablesScreen},
