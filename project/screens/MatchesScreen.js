@@ -25,7 +25,7 @@ class MatchesScreen extends React.Component {
 
     render() {
         return (
-            <ScrollView style={{flex:1,backgroundColor: '#e3e7ea'}}>
+            <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
                 <View style={styles.container}>
                     <MatchesDate  date='Sunday, June 16' 
                                   team1='Venezuela' team2='Argentina' 
