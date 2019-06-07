@@ -3,6 +3,20 @@ import {Button, StyleSheet, Text, View, ScrollView} from 'react-native';
 import Group from '../components/table/GroupTable.js';
 
 export default class TablesScreen extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        /* default state */
+        this.state = {}
+
+    }
+
+    componentDidMount() {
+        //call here the method of api from redux
+
+    }
+
     render() {
         return (
             <ScrollView>

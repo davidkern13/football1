@@ -1,49 +1,66 @@
+//This is an example of React Native Tab
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+//import react in our code.
+//For React Navigation Version 2+
+//import {createStackNavigator, createMaterialTopTabNavigator} from 'react-navigation';
+//For React Navigation Version 3+
+import {
+    createStackNavigator,
+    createMaterialTopTabNavigator,
+    createAppContainer,
+} from 'react-navigation';
+//import Navigator in our project
+
 import Scorer from '../components/scorers/Scorer';
+import TopAsists from '../components/scorers/TopAsists';
+import TopYelloCard from '../components/scorers/TopYelloCard';
+import TopRedCard from '../components/scorers/TopRedCard';
 
-export default class ScorersScreen extends React.Component {
-    constructor(props){
-        super(props)
-            this.state={
-                scorers:[]
-            }
+//Making TabNavigator which will be called in App StackNavigator
+//we can directly export the TabNavigator also but header will not be visible
+//as header comes only when we put anything into StackNavigator and then export
+const TabScreen = createMaterialTopTabNavigator(
+    {
+        Scorers: { screen: Scorer },
+        Assists: { screen: TopAsists },
+        Yellow: { screen: TopYelloCard },
+        Red: { screen: TopRedCard },
+    },
+    {
+        tabBarPosition: 'top',
+        swipeEnabled: true,
+        animationEnabled: true,
+        tabBarOptions: {
+            activeTintColor: '#FFFFFF',
+            inactiveTintColor: '#5F99DE',
+            style: {
+                backgroundColor: '#1F5FC6',
+            },
+            labelStyle: {
+                textAlign: 'center',
+            },
+            indicatorStyle: {
+                borderBottomColor: '#1F5FC6',
+                borderBottomWidth: 2,
+            },
+        },
     }
-    render() {
-        return (
-            <View style={styles.container}>
-                <View style={styles.scorerContainer}>
-                    <View style={styles.header}>
-                        <Text style={{fontSize:15,color:'gray'}}>Scorers</Text>
-                        <Text style={{fontSize:15,color:'gray'}}>Goals</Text>
-                    </View>
-                    <View>
-                        <Scorer place='1' scorerName='Ronaldinho' numOfGoals='2'/>
-                        <Scorer place='1' scorerName='Ple' numOfGoals='2'/>
-                        <Scorer place='2' scorerName='Rooney' numOfGoals='1'/>
-                        <Scorer place='2' scorerName='Neymar' numOfGoals='1'/>
-                    </View>
-                </View>
-            </View>
-        );
-    }
-}
+);
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        display:'flex',
-        flexDirection:'column',
-        backgroundColor:'lightgray'
-    },
-    scorerContainer:{
-        margin:3,
-        backgroundColor:'#fff',
-    },
-    header:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-between',
-        padding:7,
+//making a StackNavigator to export as default
+const App = createStackNavigator({
+    TabScreen: {
+        screen: TabScreen,
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#1F5FC6',
+            },
+            headerTintColor: '#FFFFFF',
+            title: 'Players Stats',
+        },
     },
 });
+//For React Navigation Version 2+
+//export default App;
+//For React Navigation Version 3+
+export default createAppContainer(App);

@@ -1,11 +1,28 @@
 import React from 'react';
 import {Platform, Button, StyleSheet, Text, View, StatusBar ,ScrollView} from 'react-native';
 import MatchesDate from '../components/matches/Matches.date';
+import {connect} from "react-redux";
 
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
 
-export default class MatchesScreen extends React.Component {
-    
+class MatchesScreen extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        /* default state */
+        this.state = {}
+
+    }
+
+    componentDidMount() {
+        //call here the method of api from redux
+    }
+
+    setMatchesDataApi = () => {
+
+    }
+
     render() {
         return (
             <ScrollView style={{flex:1,backgroundColor: '#e3e7ea'}}>
@@ -35,3 +52,15 @@ const styles = StyleSheet.create({
         padding:10
     },
 });
+
+const mapStateToProps = state =>{
+    return {
+        matches: state.matches,
+    }
+}
+
+const mapDispatchToProps = {
+
+}
+
+export default MatchesScreen;

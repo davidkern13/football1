@@ -2,31 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48a94e8a-678b-42f9-b02a-22efd735b628" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/.readMe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/components/news/EachNews.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/components/scorers/Scorer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/screens/NewsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/screens/StatisticsScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/store/.readMe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/store/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/store/reducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/store/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/utils/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/api/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/components/containers/scorers/ScorerContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/components/scorers/TopAsists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/components/scorers/TopRedCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/components/scorers/TopYelloCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/hamburger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/assists/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/assists/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/cars/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/cars/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/matches/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/matches/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/news/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/news/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/scores/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/scores/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/tables/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/store/tables/reducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DrawerNavigator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/HomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/screens/MatchesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/MatchesScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/screens/NewsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/NewsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/screens/ScorersScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/ScorersScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/screens/SettingsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/SettingsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/screens/StatisticsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/StatisticsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/screens/TablesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/TablesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/matches/Matches.box.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/matches/MatchesBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/table/Group.table.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/GroupTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/table/TeamRow.table.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/TeamRowTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/table/TeamRow.table1.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/TeamRowTable1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/table/TeamRow.table3.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/TeamRowTable3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/table/TeamRow.table4.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/TeamRowTable4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/store/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/utils/utils.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,34 +43,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/screens/NewsScreen.js">
+        <entry file="file://$PROJECT_DIR$/project/screens/StatisticsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/screens/ScorersScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/screens/SettingsScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -78,8 +57,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/screens/TablesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/components/scorers/Scorer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/components/scorers/TopAsists.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/components/scorers/TopRedCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/components/scorers/TopYelloCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/screens/HomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -90,57 +129,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1559763419332" expanded="true" signature="394:932" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/screens/NewsScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+            <state relative-caret-position="144">
+              <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/screens/StatisticsScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/matches/MatchesBox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/news/EachNews.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-612">
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,6 +167,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>MyHomeScreen</find>
+      <find>MyS</find>
+      <find>style</find>
+      <find>BottomNavigator</find>
+      <find>createStackNavigator</find>
+      <find>tab</find>
+      <find>navigationOptions</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,7 +183,6 @@
       <list>
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/project/screens/SettingsScreen.js" />
         <option value="$PROJECT_DIR$/project/screens/SideDrawer.js" />
         <option value="$PROJECT_DIR$/project/screens/startMainTab.js" />
         <option value="$PROJECT_DIR$/project/components/navigation/MenuButton.js" />
@@ -169,27 +190,47 @@
         <option value="$PROJECT_DIR$/components/DrawerNavigator.js" />
         <option value="$PROJECT_DIR$/project/navigation/DrawerNavigator.js" />
         <option value="$PROJECT_DIR$/drawer/DrawerNavigator.js" />
-        <option value="$PROJECT_DIR$/project/utils/utils.js" />
-        <option value="$PROJECT_DIR$/project/screens/TablesScreen.js" />
         <option value="$PROJECT_DIR$/project/components/table/Group.table.js" />
         <option value="$PROJECT_DIR$/project/store/store.js" />
         <option value="$PROJECT_DIR$/project/store/.readMe" />
         <option value="$PROJECT_DIR$/project/components/table/GroupTable.js" />
         <option value="$PROJECT_DIR$/project/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/project/.readMe" />
+        <option value="$PROJECT_DIR$/project/components/scorers/TopAsists.js" />
+        <option value="$PROJECT_DIR$/project/components/containers/scorers/ScorerContainer.js" />
+        <option value="$PROJECT_DIR$/project/components/scorers/TopYelloCard.js" />
+        <option value="$PROJECT_DIR$/project/components/scorers/TopRedCard.js" />
+        <option value="$PROJECT_DIR$/project/store/scores/actions.js" />
+        <option value="$PROJECT_DIR$/project/store/tables/actions.js" />
+        <option value="$PROJECT_DIR$/project/store/news/actions.js" />
+        <option value="$PROJECT_DIR$/project/store/matches/actions.js" />
+        <option value="$PROJECT_DIR$/project/store/cars/actions.js" />
+        <option value="$PROJECT_DIR$/project/store/assists/actions.js" />
+        <option value="$PROJECT_DIR$/project/store/assists/reducers.js" />
+        <option value="$PROJECT_DIR$/project/store/matches/reducers.js" />
+        <option value="$PROJECT_DIR$/project/store/cars/reducers.js" />
+        <option value="$PROJECT_DIR$/project/store/news/reducers.js" />
+        <option value="$PROJECT_DIR$/project/store/scores/reducers.js" />
+        <option value="$PROJECT_DIR$/project/store/tables/reducers.js" />
+        <option value="$PROJECT_DIR$/project/store/reducers.js" />
+        <option value="$PROJECT_DIR$/project/screens/TablesScreen.js" />
+        <option value="$PROJECT_DIR$/project/screens/StatisticsScreen.js" />
+        <option value="$PROJECT_DIR$/project/screens/SettingsScreen.js" />
+        <option value="$PROJECT_DIR$/project/utils/utils.js" />
         <option value="$PROJECT_DIR$/project/screens/MatchesScreen.js" />
         <option value="$PROJECT_DIR$/project/screens/ScorersScreen.js" />
-        <option value="$PROJECT_DIR$/project/screens/NewsScreen.js" />
-        <option value="$PROJECT_DIR$/project/screens/StatisticsScreen.js" />
+        <option value="$PROJECT_DIR$/project/api/api.js" />
+        <option value="$PROJECT_DIR$/project/components/scorers/Scorer.js" />
         <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/project/screens/NewsScreen.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1716" />
-    <option name="y" value="4" />
-    <option name="width" value="1569" />
-    <option name="height" value="1033" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="824" />
+    <option name="y" value="127" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -219,7 +260,14 @@
               <item name="football1" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="matches" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="scorers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="football1" type="b2602c69:ProjectViewProjectNode" />
@@ -232,6 +280,48 @@
               <item name="football1" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="assists" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="cars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="matches" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="scores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="football1" type="b2602c69:ProjectViewProjectNode" />
@@ -251,14 +341,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/store/tables" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\boss\githubProjects\football\football1\project\store\tables" />
+      <recent name="C:\Users\boss\githubProjects\football\football1\project\store\scores" />
+      <recent name="C:\Users\boss\githubProjects\football\football1\project\store\news" />
+      <recent name="C:\Users\boss\githubProjects\football\football1\project\store\matches" />
+      <recent name="C:\Users\boss\githubProjects\football\football1\project\store\cars" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\boss\githubProjects\football\football1\project\img" />
       <recent name="C:\Users\boss\githubProjects\football\football1\project\components" />
     </key>
   </component>
@@ -292,18 +390,18 @@
       <workItem from="1559594148229" duration="1202000" />
       <workItem from="1559625730166" duration="8071000" />
       <workItem from="1559755492034" duration="965000" />
-      <workItem from="1559757434495" duration="7211000" />
+      <workItem from="1559757434495" duration="20564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53120000" />
+    <option name="totallyTimeSpent" value="66473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1716" y="4" width="1569" height="1033" extended-state="0" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21007289" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16897655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -311,7 +409,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -320,8 +418,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.41386783" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36777776" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.78678036" visible="true" weight="0.20043337" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21321961" side_tool="true" visible="true" weight="0.20043337" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -380,39 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/components/scorers/Scorer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/store/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/store/reducers.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/store/actions.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -420,16 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -471,41 +526,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/screens/TablesScreen.js">
+    <entry file="file://$PROJECT_DIR$/project/components/containers/scorers/ScorerContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
+    <entry file="file://$PROJECT_DIR$/project/store/scores">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/tables/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/assists/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/cars/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/matches/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/news/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/scores/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/assists/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/cars/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/matches/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/news/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/scores/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/tables/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/store/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1559763419332" expanded="true" signature="394:932" ph="..." />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/screens/NewsScreen.js">
+    <entry file="file://$PROJECT_DIR$/project/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/screens/ScorersScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="e#252#372#0" expanded="true" />
+            <element signature="e#408#457#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/screens/SettingsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="238">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -514,18 +683,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/screens/StatisticsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="238">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/screens/ScorersScreen.js">
+    <entry file="file://$PROJECT_DIR$/project/screens/TablesScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/components/scorers/Scorer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/components/scorers/TopAsists.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/components/scorers/TopRedCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/components/scorers/TopYelloCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -534,10 +763,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        <state relative-caret-position="144">
+          <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/screens/NewsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
