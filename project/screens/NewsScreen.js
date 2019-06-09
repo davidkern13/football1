@@ -5,35 +5,68 @@ import EachNews from '../components/news/EachNews';
 
 export default class NewsScreen extends React.Component {
 
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
 
-        /* default state */
-        this.state = {}
+    //     /* default state */
+    //     this.state = {
+    //         data:'',
+    //         data1:'',
+    //         data2:'',
+    //         data3:'',
+    //         data4:'',
+    //         data5:'',
+    //         data6:'',
+    //         data7:'',
+    //         data8:'',
+    // }
 
-    }
+    // }
 
-    componentDidMount() {
-        //call here the method of api from redux
-    }
+    // componentDidMount() {
+    //     fetch('http://bigfiveplus.com/get-all-new-copa-america')
+    //     .then(res=>res.json())
+    //     .then(res=>this.setState({
+    //         data:res[0],
+    //         data1:res[1],
+    //         data2:res[2],
+    //         data3:res[3],
+    //         data4:res[4],
+    //         data5:res[5],
+    //         data6:res[6],
+    //         data7:res[7],
+    //         data8:res[8],
+    //     }))
+    // }
 
     render() {
+        const { data,data1,data2,data3,data4,data5,data6,data7,data8
+         } = this.state;
+        // console.log(this.state.data2)
+    //    data.map(dat=>console.log(dat))
+
         return (
             <ScrollView style={{flex:1}}>
                 <View style={styles.container}>
                     <Text style={{marginLeft:25,marginBottom:7,marginTop:20,color:'#bdbdbd',fontWeight:'700'}}>News Feed</Text>
-                        <ImageBackground source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdSivOK2Nr_IjteuJ8FXos66kz8sTS43iu-o-T8QsTH0bmm212cw'}}
+                        <ImageBackground source={{uri:data.img}}
                                          style={styles.headerNewsCon}
                                          imageStyle={{ borderRadius: 8}}>
                             <View style={styles.headerBackground}></View>
                             <View style={styles.headerTitle}>
-                                <Text style={styles.text}>The Argentine National Team roster was awarded with the return of Messi</Text>
-                                <Text style={styles.text}>10 June 2019 | Credit : BBC </Text> 
+                                <Text style={styles.text}>{data.title}</Text>
+                                <Text style={styles.text}>{data.date} | Credit : BBC </Text> 
                             </View>  
                         </ImageBackground>
-                    <EachNews />
-                    <EachNews />
-                    <EachNews />
+                      
+                    {/* <EachNews date={data1.date} img={data1.img} header={data1.title} />
+                    <EachNews date={data2.date} img={data2.img} header={data2.title} />
+                    <EachNews date={data3.date} img={data3.img} header={data3.title} />
+                    <EachNews date={data4.date} img={data4.img} header={data4.title} />
+                    <EachNews date={data5.date} img={data5.img} header={data5.title} />
+                    <EachNews date={data6.date} img={data6.img} header={data6.title} />
+                    <EachNews date={data7.date} img={data7.img} header={data7.title} />
+                    <EachNews date={data8.date} img={data8.img} header={data8.title} /> */}
                 </View>
             </ScrollView>
         );

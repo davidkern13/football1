@@ -10,13 +10,13 @@ export default class EachNews extends React.Component {
             <ScrollView>
                     <View style={styles.container}>
                     <View style={styles.content}>
-                        <Text style={styles.top}>Neymar OUT of Copa America 2019 after Brazil star suffers ankle injury</Text>
-                        <Text style={styles.center}>fdgfdg dsfdb fgh fdgnkbdgjkbdgjkbfd fdkgbffdgf kdbgjkfd fdkg</Text>
-                        <Text style={styles.bottomCon}>07 June 2019 | Credit BBC </Text>
+                        <Text style={styles.top}>{this.props.header}</Text>
+                        <Text style={styles.center}>{this.props.content}</Text>
+                        <Text style={styles.bottomCon}>{this.props.date} | Credit {this.props.credit} </Text>
                     </View>
                     <View style={styles.ImageContainer}>
                             <Image style={{resizeMode: 'cover',flex:1, borderTopRightRadius:8, borderBottomRightRadius:8,}}
-                                   source={{uri: 'https://scontent.ftlv4-1.fna.fbcdn.net/v/t31.0-8/1048631_623435157666850_2043591227_o.jpg?_nc_cat=108&_nc_ht=scontent.ftlv4-1.fna&oh=59f76406cec832833d068b30ca25f6c0&oe=5D9551DB'}}/>
+                                   source={{uri: this.props.img}}/>
                     </View>
                     
                     </View>
