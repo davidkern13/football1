@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
-import Scorer from '../../components/scorers/Scorer';
+import Scorer from '../../../components/scorers/Scorer';
 
 export default class ScorersScreen extends React.Component {
     constructor(props){
