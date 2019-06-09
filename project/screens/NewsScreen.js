@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, StyleSheet, Text, View, ScrollView, TouchableOpacity} from 'react-native';
 import EachNews from '../components/news/EachNews';
 
+
 export default class NewsScreen extends React.Component {
 
     constructor(props) {
@@ -14,7 +15,6 @@ export default class NewsScreen extends React.Component {
 
     componentDidMount() {
         //call here the method of api from redux
-
     }
 
     render() {

@@ -35,8 +35,6 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         display: 'flex',
-        flexDirection:'column',
-        backgroundColor: '#fff',
-        justifyContent: 'center',
+        backgroundColor: '#f4f4f4',
     },
 });

@@ -12,10 +12,11 @@ export default class MatchesBox extends React.Component {
        }
    }
    componentDidMount(){
-       console.log(this.state)
-   }
+    //    fetch('https://bigfiveplus.com/test-table/superliga-playoff').then(res=>res.json()).then(res=>this.setState({data:res}))
+    }
     
     render() {
+        // console.log(this.state)
         return (
             <View style={styles.container}>
                 <View style={styles.matchDisplay}>
