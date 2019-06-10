@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View ,ScrollView} from 'react-native';
 import PersonStat from './PersonStat';
 
 
@@ -7,44 +7,59 @@ export default class TopYelloCard extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            assist:[]
+            scorer:null
         }
     }
+    componentDidMount(){
+        
+        fetch('https://bigfiveplus.com/scorers-api/champions-league', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        }).then(res=>res.json()).then(res=>this.setState({scorer:res.topScorersPlayersList}))
+    }
+
+    find(stats){
+       return stats.map((player,i)=>{       
+            return ( <PersonStat key={i} 
+                                 backgroundColor={i%2!==0?'#f4f4f4':'#ffffff'}
+                                 rank={player.position}
+                                 playerName={player.name} 
+                                 playerImg={player.club_img}
+                                 nationalTeam={player.country}
+                                 statNum={player.assists}/>)
+        })
+    }
     render() {
+        const {scorer}=this.state;
+
         return (
-            <View style={styles.container}>   
-                <View style={styles.statsContainer}>
-                    <View style={styles.headerContainer}>
-                        <View style={styles.leftHeader}>
-                            <Text style={{color:'#bdbdbd',marginLeft:15,marginRight:35,fontWeight:'600',fontSize:15}}>Rank</Text>
-                            <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Player</Text>
+            <ScrollView style={{flex:1,backgroundColor:'#f4f4f4'}}>
+                <View style={styles.container}>   
+                    <View style={styles.statsContainer}>
+                        <View style={styles.headerContainer}>
+                            <View style={styles.leftHeader}>
+                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15,marginLeft:10,marginRight:30}}>Rank</Text>
+                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Player</Text>
+                            </View>
+                            <View style={styles.rightHeader}>
+                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Cards</Text>
+                            </View>
                         </View>
-                        <View style={styles.rightHeader}>
-                            <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Cards</Text>
-                        </View>
-                    </View>
-                     <PersonStat rank='01' 
-                     playerImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_uOLUuxYX9w4ZwCLWgyOJUECRv1qoiQNDdjzJmm5m0XXNIOru-Q' 
-                     playerName='Eren Zehavi' nationalTeam='Israel' statNum='7' backgroundColor='#ffffff'/>
-                     <PersonStat rank='02' 
-                     playerImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_uOLUuxYX9w4ZwCLWgyOJUECRv1qoiQNDdjzJmm5m0XXNIOru-Q' 
-                     playerName='Javier Hernandez' nationalTeam='Mexico' statNum='5' backgroundColor='#f4f4f4'/>
-                     <PersonStat rank='03' 
-                     playerImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_uOLUuxYX9w4ZwCLWgyOJUECRv1qoiQNDdjzJmm5m0XXNIOru-Q' 
-                     playerName='Eren Zehavi' nationalTeam='Israel' statNum='7' backgroundColor='#ffffff'/>
-                     <PersonStat rank='04' 
-                     playerImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_uOLUuxYX9w4ZwCLWgyOJUECRv1qoiQNDdjzJmm5m0XXNIOru-Q' 
-                     playerName='Javier Hernandez' nationalTeam='Mexico' statNum='5' backgroundColor='#f4f4f4'/>
-                </View> 
-            </View>
+                        {
+                            scorer===null?<PersonStat rank='-' playerName='-' statNum='-'/>:this.find(scorer)
+                        }
+                    </View> 
+                </View>
+            </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
-        backgroundColor:'#f4f4f4'
     },
     statsContainer:{
         display:'flex',
@@ -72,6 +87,6 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'row',
         flexBasis:'20%',
-        justifyContent:'center'
+        justifyContent:'center',
     }
 });

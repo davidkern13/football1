@@ -12,7 +12,7 @@ export default class EachNews extends React.Component {
                     <View style={styles.content}>
                         <Text style={styles.top}>{this.props.header}</Text>
                         <Text style={styles.center}>{this.props.content}</Text>
-                        <Text style={styles.bottomCon}>{this.props.date} | Credit {this.props.credit} </Text>
+                        <Text style={styles.bottomCon}>{this.props.date} | Credit {this.props.author} </Text>
                     </View>
                     <View style={styles.ImageContainer}>
                             <Image style={{resizeMode: 'cover',flex:1, borderTopRightRadius:8, borderBottomRightRadius:8,}}
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#ffffff',
         flexDirection:'column',
         justifyContent:'space-evenly',
-        flexBasis:'70%',
+        flexBasis:'65%',
         borderTopLeftRadius:8,
         borderBottomLeftRadius:8,
         paddingLeft:10,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         fontSize:12
     },
     ImageContainer:{
-        flexBasis:'30%',
+        flexBasis:'35%',
         borderTopRightRadius:8,
     },
    

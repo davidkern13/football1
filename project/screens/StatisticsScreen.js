@@ -17,7 +17,7 @@ export default class StatisticsScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View>
                 <Text>Statistics</Text>
             </View>
         );
