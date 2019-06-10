@@ -20,11 +20,9 @@ class MatchesScreen extends React.Component {
     componentDidMount() {
         //call here the method of api from redux
         this.callApiMatches();
-        setInterval(() => {
+        //setInterval(() => {
             this.callApiMatches();
-        }, 60000)
-
-
+        //}, 60000)
     }
 
     callApiMatches(){
@@ -42,9 +40,9 @@ class MatchesScreen extends React.Component {
                 })
             }).done();
         })
-            .catch((error) => {
-                console.error(error);
-            });
+        .catch((error) => {
+            console.error(error);
+        });
     }
 
     renderMatchesDate(todayGameList) {
@@ -96,7 +94,6 @@ class MatchesScreen extends React.Component {
                                 <Text style={{backgroundColor:'#36bc4f',borderRadius:100,width:6,height:6}}></Text>
                             </View>
                         }
-
                     </View>
                 </View>
                 </View>
