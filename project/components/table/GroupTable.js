@@ -17,7 +17,7 @@ export default class Group extends React.Component {
                 <View style={{borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
                     <View style={styles.containerTop}>
                         <View style={{}}>
-                            <Text style={{color:'#bdbdbd',paddingLeft:11}}>Team</Text>
+                            <Text style={{color:'#a1a1a1',paddingLeft:11,fontSize:14,fontWeight:'500'}}>Team</Text>
                         </View>
                         <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',width:133}}>
                             <Text style={styles.textR}>W</Text>
@@ -75,12 +75,12 @@ const styles = StyleSheet.create({
     },
     textR: {
         fontSize:14,
-        color:'#bdbdbd',
+        color:'#a1a1a1',
         fontWeight:'500',
     },
     textRPoints:{
         fontSize:14,
-        color:'#bdbdbd',
+        color:'#a1a1a1',
         fontWeight:'500',
         marginLeft:-5,
     },

@@ -6,7 +6,7 @@ export default class PersonStat extends React.Component {
         return (
                 <View style={{display:'flex',flexDirection:'row',alignItems:'center',height:60, backgroundColor:this.props.backgroundColor}}>
                     <View style={styles.leftHeader}>
-                        <Text style={{marginLeft:20,marginRight:45,fontWeight:'700',fontSize:15}}>{this.props.rank}</Text>
+                        <Text style={{marginLeft:20,fontWeight:'700',fontSize:15}}>{this.props.rank}</Text>
                         <View style={styles.playerStatsContainer}>
                             <Image source={{uri:this.props.playerImg}}
                                    style={{height:27,width:27,borderRadius:100}}/>
@@ -25,11 +25,12 @@ export default class PersonStat extends React.Component {
 }
 
 const styles = StyleSheet.create({
-
+ 
     leftHeader:{
         display:'flex',
         flexDirection:'row',
         alignItems:'center',
+        justifyContent:'space-between',
         flexBasis:'80%',
     },
     rightHeader:{
@@ -37,21 +38,21 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         flexBasis:'20%',
-        justifyContent:'center'
+        justifyContent:'center',
     },
     playerStatsContainer:{
         display:'flex',
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'flex-start',
-        width:200,
+        width:210,
     },
     playerStats:{
         display:'flex',
         flexDirection:'column',
         alignItems:'flex-start',
         justifyContent:'space-between',
-        paddingLeft:12
+        marginLeft:8
     }
    
 });

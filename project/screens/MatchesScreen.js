@@ -48,7 +48,7 @@ class MatchesScreen extends React.Component {
     renderMatchesDate(todayGameList) {
 
         return todayGameList.map((item, index) => {
-            console.log(item)
+            // console.log(item)
             return (
                 <View style={styles.container} key={Math.random()}>
                 {

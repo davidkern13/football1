@@ -51,6 +51,8 @@ export default class SplashScreen extends React.Component {
 var styles = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent:'center',
+        alignItems:'center'
     },
     backgroundImage: {
         flex: 1,

@@ -12,7 +12,7 @@ import {
 } from 'react-navigation';
 //import Navigator in our project
 
-import ScorersContainer from '../components/containers/scorers/ScorerContainer';
+import ScorersContainer from '../components/scorers/Scorer.js';
 import TopAsists from '../components/scorers/TopAsists';
 import TopYelloCard from '../components/scorers/TopYelloCard';
 import TopRedCard from '../components/scorers/TopRedCard';
