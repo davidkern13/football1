@@ -31,8 +31,10 @@ export default class NewsScreen extends React.Component {
     }
 
     find(AllNews){
+        this.state.news.shift();
+
        return AllNews.map((eachOne,i)=>{
-            return ( <EachNews key={i} header={eachOne.title} date={eachOne.date} img={eachOne.img} credit={eachOne.author}/> )
+            return ( <EachNews key={i} header={eachOne.title} date={eachOne.date} img={eachOne.img} author={eachOne.author}/> )
         })
     }
     render() {
@@ -44,7 +46,7 @@ export default class NewsScreen extends React.Component {
                     <Text style={{marginLeft:25,marginBottom:7,marginTop:20,color:'#bdbdbd',fontWeight:'700'}}>News Feed</Text> 
                     <FirstNews title={firstNews.title} date={firstNews.date} img={firstNews.img} credit={firstNews.author} />
                         {
-                            news === null? <EachNews /> : this.find(news) 
+                            news === null ? <EachNews /> : this.find(news) 
                         }
                 </View>
             </ScrollView>

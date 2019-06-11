@@ -7,16 +7,15 @@ import TeamRow4 from './TeamRowTable4.js';
 
 export default class Group extends React.Component {
   
-
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.groupContainer}>
-                    <Text style={styles.text}>Group {this.props.group}</Text>
+                    <Text style={styles.text}>{this.props.group}</Text>
                 </View>
                 <View style={{borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
                     <View style={styles.containerTop}>
-                        <View style={{}}>
+                        <View>
                             <Text style={{color:'#a1a1a1',paddingLeft:11,fontSize:14,fontWeight:'500'}}>Team</Text>
                         </View>
                         <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',width:133}}>
@@ -27,10 +26,11 @@ export default class Group extends React.Component {
                         </View>
                     </View>
                     <View style={styles.teamsContainer}>
-                        <TeamRow1 place1={this.props.place1}/>
-                        <TeamRow place2={this.props.place2}/>
-                        <TeamRow3 place3={this.props.place3}/>
-                        <TeamRow4 place4={this.props.place4}/>
+                        {this.props.children}
+                        {/* <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
+                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
+                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
+                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/> */}
                     </View>
                 </View>
             </View>

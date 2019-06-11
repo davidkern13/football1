@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View, ScrollView} from 'react-native';
 import Group from '../components/table/GroupTable.js';
+import TeamRow from '../components/table/TeamRowTable.js';
 
 export default class TablesScreen extends React.Component {
 
@@ -8,22 +9,48 @@ export default class TablesScreen extends React.Component {
         super(props);
 
         /* default state */
-        this.state = {}
+        this.state = {
+            table:null,
+        }
 
     }
 
-    componentDidMount() {
-        //call here the method of api from redux
+    componentDidMount(){
+        
+        fetch('https://bigfiveplus.com/standings-tables-api/copa-america', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        }).then(res=>res.json()).then(res=>this.setState({ table:res}))
+    }
 
+    sortTeam(teamsArr){
+      
+        return teamsArr.map((eachTeam,i)=>{
+            return (<Group key={i}>
+                            <TeamRow key={i} place={eachTeam.team_name} 
+                                    group={eachTeam.name} teamLogo={eachTeam.team_logo} 
+                                    win={eachTeam.overall.won}
+                                    draw={eachTeam.overall.draw}
+                                    lose={eachTeam.overall.lost}
+                                    points={eachTeam.total.points}
+                                    backgroundColor={ eachTeam.position % 2  !== 0 ? '#ffffff':'#f3f4f8' }/>
+                    </Group> )
+        })
     }
 
     render() {
+        const { table } = this.state;
+    
+        // console.log(typeof(table))
         return (
-            <ScrollView>
+            <ScrollView style={{flex:1, backgroundColor: '#f4f4f4'}}>
                 <View style={styles.container}>    
-                    <Group group='A' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
-                    <Group group='B' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
-                    <Group group='C' place1='Bolivia' place2='Brazil' place3='Peru' place4='Venezuela'/>
+                {
+                    table === null? <Group /> :  this.sortTeam(table)
+                }
                 </View>
             </ScrollView>
             
@@ -33,8 +60,6 @@ export default class TablesScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
         display: 'flex',
-        backgroundColor: '#f4f4f4',
     },
 });

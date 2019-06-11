@@ -21,7 +21,7 @@ class MatchesScreen extends React.Component {
         //call here the method of api from redux
         this.callApiMatches();
         //setInterval(() => {
-            this.callApiMatches();
+            // this.callApiMatches();
         //}, 60000)
     }
 
@@ -50,7 +50,7 @@ class MatchesScreen extends React.Component {
         return todayGameList.map((item, index) => {
             // console.log(item)
             return (
-                <View style={styles.container} key={Math.random()}>
+                <View style={styles.container} key={index}>
                 {
                     <View style={styles.containerTop}>
                         <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{item.gameSDate}</Text>

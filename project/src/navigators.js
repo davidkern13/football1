@@ -50,18 +50,25 @@ const App = createStackNavigator({
             // title: 'Copa America 2019',
             headerLeft:
                 <View style={{
+                    width:390,
+                    display:'flex',
                     flexDirection: "row",
-                    justifyContent: "space-between"
+                    justifyContent:'center',
+                    alignItems:'center'
                 }}
                 >
-                    <View style={{ flex: 1, left: 15 }}>
-                        <TouchableOpacity  onPress={()=> navigation.openDrawer()}><Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}} resizeMode="contain" style={{ width: 24, height: 24  }}/></TouchableOpacity>
+                    {/* <View style={{display:'flex',flexDirection:'column',justifyContent:'center',borderColor:'red',borderWidth:1 ,flexBasis:'10%'}}> */}
+                        <TouchableOpacity  onPress={()=> navigation.openDrawer()} style={{position:'absolute',left:10}}>
+                            <Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                        </TouchableOpacity>
 
-                    </View>
-                    <View style={{ alignItems: "center", left: width/2 }}>
-                        <TouchableOpacity  onPress={()=> navigation.openDrawer()}><Image  source={{uri: "http://www.up2me.co.il/images/85296732.png?fbclid=IwAR3WVmuh6K4l3HB4v0Y0dU-fwtPwV2_tqXeWzR8V42qsoxxnn3uL_siJ0vM"}} resizeMode="contain" style={{ width: 100, height: 40 }}/></TouchableOpacity>
+                    {/* </View> */}
+                    {/* <View style={{ display:'flex',justifyContent:'center',borderColor:'blue',borderWidth:1,flexBasis:'90%' }}> */}
+                        <TouchableOpacity  onPress={()=> navigation.openDrawer()}>
+                            <Image  source={{uri: "http://www.up2me.co.il/images/85296732.png?fbclid=IwAR3WVmuh6K4l3HB4v0Y0dU-fwtPwV2_tqXeWzR8V42qsoxxnn3uL_siJ0vM"}} resizeMode="contain" style={{ width: 105, height: 50 }}/>
+                        </TouchableOpacity>
 
-                    </View>
+                    {/* </View> */}
                 </View>
 
 
