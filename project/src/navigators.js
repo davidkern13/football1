@@ -28,7 +28,7 @@ const BottomNavigator = createBottomTabNavigator(
         Matches: MatchesScreen,
         News: NewsScreen,
         Tables: TablesScreen,
-        StatisticsScreen: StatisticsScreen,
+        Stats: StatisticsScreen,
     }
 );
 
@@ -50,7 +50,7 @@ const App = createStackNavigator({
             // title: 'Copa America 2019',
             headerLeft:
                 <View style={{
-                    width:390,
+                    width:width,
                     display:'flex',
                     flexDirection: "row",
                     justifyContent:'center',
@@ -157,6 +157,15 @@ const MyApp = createDrawerNavigator({
                 ),
             },
         },
+    },
+    {
+        shifting: false,
+        backBehavior: 'initialRoute',
+        activeColor: 'white',
+        tabBarColor: 'blue',
+        inactiveTintColor: 'black',
+        barStyle: { backgroundColor: 'orange' },
+        swipeEnabled: true
     }
 );
 

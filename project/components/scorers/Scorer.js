@@ -49,7 +49,11 @@ export default class Scorer extends React.Component {
                             </View>
                         </View>
                         {
-                            scorer===null?<PersonStat rank='-' playerName='-' statNum='-'/>:this.find(scorer)
+                            scorer === null
+                            ?
+                            <PersonStat rank='-' playerName='-' statNum='-'/>
+                            :
+                            this.find(scorer)
                         }
                     </View> 
                 </View>

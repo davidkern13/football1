@@ -6,17 +6,20 @@ import { black } from 'ansi-colors';
 export default class EachNews extends React.Component {
     
     render() {
+
+        let { title, content, date, author, img } = this.props;
+
         return (
             <ScrollView>
                     <View style={styles.container}>
                     <View style={styles.content}>
-                        <Text style={styles.top}>{this.props.header}</Text>
-                        <Text style={styles.center}>{this.props.content}</Text>
-                        <Text style={styles.bottomCon}>{this.props.date} | Credit {this.props.author} </Text>
+                        <Text style={styles.top}>{title}</Text>
+                        <Text style={styles.center}>{content}</Text>
+                        <Text style={styles.bottomCon}>{date} | Credit {author} </Text>
                     </View>
                     <View style={styles.ImageContainer}>
                             <Image style={{resizeMode: 'cover',flex:1, borderTopRightRadius:8, borderBottomRightRadius:8,}}
-                                   source={{uri: this.props.img}}/>
+                                   source={{uri: img}}/>
                     </View>
                     
                     </View>

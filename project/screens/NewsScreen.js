@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View, ScrollView} from 'react-native';
 import EachNews from '../components/news/EachNews';
-import FirstNews from '../components/news/FirstNews';
+import MainNews from '../components/news/MainNews';
 
 
 export default class NewsScreen extends React.Component {
@@ -30,11 +30,15 @@ export default class NewsScreen extends React.Component {
                 firstNews:res[0]}))
     }
 
-    find(AllNews){
+    /*
+    *  Write to the content the news withour first(main) item
+    */
+    writeEachNews(AllNews){
+        //remove the first position from array
         this.state.news.shift();
 
        return AllNews.map((eachOne,i)=>{
-            return ( <EachNews key={i} header={eachOne.title} date={eachOne.date} img={eachOne.img} author={eachOne.author}/> )
+            return ( <EachNews key={i} title={eachOne.title.substring(0,40)} date={eachOne.date} img={eachOne.img} author={eachOne.author}/> )
         })
     }
     render() {
@@ -43,10 +47,19 @@ export default class NewsScreen extends React.Component {
         return (
             <ScrollView style={{flex:1}}>
                 <View style={styles.container}>
-                    <Text style={{marginLeft:25,marginBottom:7,marginTop:20,color:'#bdbdbd',fontWeight:'700'}}>News Feed</Text> 
-                    <FirstNews title={firstNews.title} date={firstNews.date} img={firstNews.img} credit={firstNews.author} />
+                    {/*<EachNews />*/}
                         {
-                            news === null ? <EachNews /> : this.find(news) 
+                            news === null
+                                ?
+                                <Text>Loading</Text>
+                                :
+                                <View>
+                                    {/*main news*/}
+                                    <Text style={{marginLeft:25,marginBottom:7,marginTop:20,color:'#bdbdbd',fontWeight:'700'}}>News Feed</Text>
+                                    <MainNews title={firstNews.title.substring(0,40)} date={firstNews.date} img={firstNews.img} credit={firstNews.author} />
+                                    {/*each news*/}
+                                    {this.writeEachNews(news)}
+                                </View>
                         }
                 </View>
             </ScrollView>

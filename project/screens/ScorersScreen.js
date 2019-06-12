@@ -60,7 +60,7 @@ const Left = ({ onPress }) => (
 const App = createStackNavigator({
     TabScreen: {
         screen: TabScreen,
-        navigationOptions: {
+        navigationOptions: ({ navigation }) => ({
             // headerStyle: {
             //     backgroundColor: '#1F5FC6',
             // },
@@ -80,8 +80,7 @@ const App = createStackNavigator({
                                                                                           resizeMode="contain"
                                                                                           style={{ width: 24, height: 24, left: 15 }}
             /></TouchableOpacity>
-        },
-
+        }),
     },
 });
 //For React Navigation Version 2+

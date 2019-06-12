@@ -1,19 +1,25 @@
 import React from 'react';
 import {Platform, Button, StyleSheet, Text, View, Image ,ScrollView ,ImageBackground} from 'react-native';
+import { Constants } from 'expo';
 
-
-export default class FirstNews extends React.Component {
+export default class MainNews extends React.Component {
     
     render() {
+
+        let { img, title, date, credit } = this.props;
+
         return (
-            <ImageBackground source={{ uri:this.props.img}} 
+            <ImageBackground source={{ uri:img}}
                                        style={styles.headerNewsCon}
                                        imageStyle={{ borderRadius: 8}}>
+
                 <View style={styles.headerBackground}></View>
+
                 <View style={styles.headerTitle}>
-                    <Text style={styles.text}>{this.props.title}</Text>
-                    <Text style={styles.text}>{this.props.date} | Credit : {this.props.credit} </Text> 
-                </View>  
+                    <Text style={styles.text}>{title}</Text>
+                    <Text style={styles.text}>{date} | Credit : {credit} </Text>
+                </View>
+
             </ImageBackground>
         );
     }
