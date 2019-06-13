@@ -43,6 +43,7 @@ export default class SplashScreen extends React.Component {
         return (
             <View style={ styles.container }>
                 <Image source={require('../img/splash.png')} style={styles.backgroundImage} />
+                <Text style={{position:'absolute',bottom:15,fontSize:24,color:'white'}}>By Big5+</Text>
             </View>
         );
     }

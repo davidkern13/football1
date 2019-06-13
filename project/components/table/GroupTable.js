@@ -13,7 +13,8 @@ export default class Group extends React.Component {
                 <View style={styles.groupContainer}>
                     <Text style={styles.text}>{this.props.group}</Text>
                 </View>
-                <View style={{borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
+                <View style={{display:'flex',flexDirection:'column',
+                        borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
                     <View style={styles.containerTop}>
                         <View>
                             <Text style={{color:'#a1a1a1',paddingLeft:11,fontSize:14,fontWeight:'500'}}>Team</Text>
@@ -27,10 +28,6 @@ export default class Group extends React.Component {
                     </View>
                     <View style={styles.teamsContainer}>
                         {this.props.children}
-                        {/* <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
-                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
-                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
-                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/> */}
                     </View>
                 </View>
             </View>
@@ -56,7 +53,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        height:30,
+        height:40,
         color:'gray',
         backgroundColor:'#ffffff',
         fontSize:16,
@@ -87,5 +84,6 @@ const styles = StyleSheet.create({
     teamsContainer:{
         display:'flex',
         flexDirection:'column',
+        marginTop:-30,
     }
 });

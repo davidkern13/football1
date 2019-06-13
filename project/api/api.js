@@ -22,20 +22,20 @@ export const getApiData = async (urlApi) => {
  */
 export const getStartedData = async () => {
 
-    let objectOfApis = getApisUrls(false, true);
+    // let objectOfApis = getApisUrls(false, true);
 
-    fetch(getstages).then((response) => response.json()).then((responseData)  => {
-        this.setState({
-            city: responseData.location.city
-        });
-    }).then(()=>{
-        fetch(request_2_url).then((response) => response.json()).then((responseData) => {
-            this.setState({
-                state: responseData.location.state,
-                isFinish: true
-            });
-        }).done();
-    }).done();
+    // fetch(getstages).then((response) => response.json()).then((responseData)  => {
+        // this.setState({
+            // city: responseData.location.city
+        // });
+    // }).then(()=>{
+        // fetch(request_2_url).then((response) => response.json()).then((responseData) => {
+            // this.setState({
+                // state: responseData.location.state,
+                // isFinish: true
+            // });
+        // }).done();
+    // }).done();
 }
 
 /*

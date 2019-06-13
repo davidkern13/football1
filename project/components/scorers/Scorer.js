@@ -12,7 +12,7 @@ export default class Scorer extends React.Component {
     }
     componentDidMount(){
         
-        fetch('https://bigfiveplus.com/scorers-api/champions-league', {
+        fetch('https://bigfiveplus.com/scorers-api/premier-league', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
@@ -28,7 +28,7 @@ export default class Scorer extends React.Component {
                                  rank={player.position}
                                  playerName={player.name} 
                                  playerImg={player.club_img}
-                                 nationalTeam={player.country}
+                                 nationalTeam={player.country.substring(1,player.country.length-1)}
                                  statNum={player.assists}/>)
         })
     }

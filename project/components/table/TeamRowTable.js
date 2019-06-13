@@ -5,6 +5,7 @@ export default class TeamRow extends React.Component {
     render() {
 
         let { teamLogo, place, win, draw, lose, points } = this.props;
+
         return (
             <View style={{
                 display:'flex',
@@ -13,7 +14,12 @@ export default class TeamRow extends React.Component {
                 flexDirection:'row',
                 height:45,
                 paddingRight:15,
-                backgroundColor:this.props.backgroundColor
+                marginLeft:15,
+                marginRight:15,
+                backgroundColor:this.props.backgroundColor,
+                elevation:this.props.elevation,
+                borderBottomLeftRadius:this.props.borderBottomLeftRadius,
+                borderBottomRightRadius:this.props.borderBottomRightRadius
             }}>
 
                 <View style={styles.statsLeft}>

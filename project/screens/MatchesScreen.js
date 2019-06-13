@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, Button, StyleSheet, Text, View, StatusBar, ScrollView, Image} from 'react-native';
+import {Platform, Button, StyleSheet, Text, View, StatusBar, ScrollView, Image, Picker} from 'react-native';
 import MatchesDate from '../components/matches/MatchesDate';
 import { getApisUrls } from '../api/api';
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
@@ -11,8 +11,12 @@ class MatchesScreen extends React.Component {
 
         /* default state */
         this.state = {
-            currentRound: 1,
-            todayGameList: {}
+            currentRound: null,
+            fetchUrls:[
+                'https://bigfiveplus.com/competition/copa-america/get-rounds',
+                'https://bigfiveplus.com/get-stages/copa-america',
+            ],
+            todayGameList: {},
         }
 
     }
@@ -32,12 +36,14 @@ class MatchesScreen extends React.Component {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-        }).then((dataStr) => {
+        })
+        .then((dataStr) => {
             fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + parseInt(dataStr._bodyInit)).then((response) => response.json()).then((responseData) => {
                 this.setState({
                     currentRound:  parseInt(dataStr._bodyInit),
                     todayGameList: responseData
-                })
+                });
+               
             }).done();
         })
         .catch((error) => {
@@ -90,7 +96,7 @@ class MatchesScreen extends React.Component {
                                 <Text style={{color:'#a1a1a1',fontSize:12}}>
                                     {item.gameTimeMinnute}
                                     {parseInt(item.gameTimeInjuryTime) >= 0 ? item.gameTimeInjuryTime : ''}
-                                    '</Text>
+                                '</Text>
                                 <Text style={{backgroundColor:'#36bc4f',borderRadius:100,width:6,height:6}}></Text>
                             </View>
                         }
@@ -101,11 +107,53 @@ class MatchesScreen extends React.Component {
         });
     }
 
+    selectedRound(round){
+        console.log(round)
+         fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(res=>res.json())
+        .then(res=>this.setState({ todayGameList:res }))
+    }
 
     render() {
-        let { currentRound, todayGameList } = this.state;
+        let { currentRound, todayGameList ,rounds} = this.state;
         return (
             <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
+                    <View style={styles.dropDownContainer}>
+                      <Picker selectedValue={this.state.currentRound}
+                             mode='dropdown'
+                             style={{
+                                display:'flex',
+                                flexDirection:'row',
+                                justifyContent:'space-between',
+                                alignItems:'center',
+                                width:'100%',
+                                height:30,
+                                transform: [
+                             ]
+                           }}
+                            onValueChange={itemValue =>
+                                {
+                                this.setState({currentRound: itemValue});
+                                this.selectedRound(itemValue);
+                            }}>
+                                {
+
+                                }
+                            <Picker.Item label="Round 1" value="1" />
+                            <Picker.Item label="Round 2" value="2" />
+                            <Picker.Item label="Round 3" value="3" />
+                            <Picker.Item label="Quarter Final" value="Quarter Finals" />
+                            <Picker.Item label="Semi Final" value="Semi Finals" />
+                            <Picker.Item label="3rd place" value="3rd place" />
+                            <Picker.Item label="Final" value="Final" />
+                        </Picker>
+                    </View>
                 <View style={styles.container}>
 
                     {
@@ -135,7 +183,21 @@ const styles = StyleSheet.create({
     container: {
         display:'flex',
         flexDirection:'column',
-        padding:10
+        padding:10,
+        marginTop:10
+    },
+    dropDownContainer:{
+        backgroundColor:'#ffffff',
+        elevation:.4,
+        paddingLeft:30,
+        paddingRight:30,
+        position:'absolute',
+        top:0,
+        width:'100%',
+        display:'flex',
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'space-between'
     },
     containerTop:{
         display:'flex',

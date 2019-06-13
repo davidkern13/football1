@@ -30,18 +30,22 @@ export default class TablesScreen extends React.Component {
       
         return teamsArr.map((eachTeam,i)=>{
             return (
-                <View style={styles.AddHereCssOfTable}>
+               
+                <View key={i}>    
                     {
                         i % 4 == 0 &&
-                        <Group key={i}></Group>
+                        <Group group={eachTeam.name}></Group>
                     }
 
                     <TeamRow key={i} place={eachTeam.team_name}
-                        group={eachTeam.name} teamLogo={eachTeam.team_logo}
+                        teamLogo={eachTeam.team_logo}
                         win={eachTeam.overall.won}
                         draw={eachTeam.overall.draw}
                         lose={eachTeam.overall.lost}
                         points={eachTeam.total.points}
+                        elevation={eachTeam.position % 4  !== 0 ? 0 : 1}
+                        borderBottomLeftRadius={eachTeam.position % 4 !==0? 0 : 8 }
+                        borderBottomRightRadius={eachTeam.position % 4 !==0? 0 : 8 }
                         backgroundColor={ eachTeam.position % 2  !== 0 ? '#ffffff':'#f3f4f8' }/>
                 </View>
 
@@ -51,14 +55,13 @@ export default class TablesScreen extends React.Component {
 
     render() {
         const { table } = this.state;
-    
-        // console.log(typeof(table))
+  
         return (
             <ScrollView style={{flex:1, backgroundColor: '#f4f4f4'}}>
-                <View style={styles.container}>    
-                {
-                    table === null ? <Text>Loading</Text> :  this.sortTeam(table)
-                }
+                <View style={styles.container}>  
+                    {
+                        table === null ? <Text style={styles.loadingText}>Loading...</Text> :  this.sortTeam(table)
+                    }
                 </View>
             </ScrollView>
             
@@ -70,12 +73,9 @@ const styles = StyleSheet.create({
     container: {
         display: 'flex',
     },
-    AddHereCssOfTable: {
-        display:'flex',
-        marginBottom:20,
-        marginTop:20,
-        marginLeft:15,
-        marginRight:15,
-        backgroundColor:'#ddd',
+    loadingText:{
+        fontSize:20,
+        color:'green',
     }
+   
 });
