@@ -72,6 +72,7 @@ export default class TablesScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
+        marginBottom:20
     },
     loadingText:{
         fontSize:20,

@@ -54,9 +54,9 @@ class MatchesScreen extends React.Component {
     renderMatchesDate(todayGameList) {
 
         return todayGameList.map((item, index) => {
-            // console.log(item)
+         
             return (
-                <View style={styles.container} key={index}>
+                <View style={styles.containerPerMatch} key={index}>
                 {
                     <View style={styles.containerTop}>
                         <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{item.gameSDate}</Text>
@@ -108,7 +108,7 @@ class MatchesScreen extends React.Component {
     }
 
     selectedRound(round){
-        console.log(round)
+        // console.log(round)
          fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
             method: 'GET',
             headers: {
@@ -121,7 +121,7 @@ class MatchesScreen extends React.Component {
     }
 
     render() {
-        let { currentRound, todayGameList ,rounds} = this.state;
+        let { currentRound, todayGameList } = this.state;
         return (
             <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
                     <View style={styles.dropDownContainer}>
@@ -133,9 +133,7 @@ class MatchesScreen extends React.Component {
                                 justifyContent:'space-between',
                                 alignItems:'center',
                                 width:'100%',
-                                height:30,
-                                transform: [
-                             ]
+                                height:35,
                            }}
                             onValueChange={itemValue =>
                                 {
@@ -145,7 +143,7 @@ class MatchesScreen extends React.Component {
                                 {
 
                                 }
-                            <Picker.Item label="Round 1" value="1" />
+                            <Picker.Item label="Round 1" value="1"/>
                             <Picker.Item label="Round 2" value="2" />
                             <Picker.Item label="Round 3" value="3" />
                             <Picker.Item label="Quarter Final" value="Quarter Finals" />
@@ -180,11 +178,19 @@ class MatchesScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    containerPerMatch:{
+        marginBottom:15,
+        // borderWidth:1,
+        // borderColor:'red'
+    },
     container: {
         display:'flex',
         flexDirection:'column',
-        padding:10,
-        marginTop:10
+        paddingLeft:10,
+        paddingRight:10,
+        paddingTop:2,
+        paddingBottom:2,
+        marginTop:50,
     },
     dropDownContainer:{
         backgroundColor:'#ffffff',

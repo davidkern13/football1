@@ -12,13 +12,13 @@ export default class Scorer extends React.Component {
     }
     componentDidMount(){
         
-        fetch('https://bigfiveplus.com/scorers-api/premier-league', {
+        fetch('https://bigfiveplus.com/scorers-api/ligue-1', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-        }).then(res=>res.json()).then(res=>this.setState({scorer:res.topScorersPlayersList}))
+        }).then(res=>res.json()).then(res=>this.setState({scorer:res.topPlayersList}))
     }
 
     find(stats){
@@ -29,7 +29,7 @@ export default class Scorer extends React.Component {
                                  playerName={player.name} 
                                  playerImg={player.club_img}
                                  nationalTeam={player.country.substring(1,player.country.length-1)}
-                                 statNum={player.assists}/>)
+                                 statNum={player.goals}/>)
         })
     }
     render() {
@@ -49,11 +49,7 @@ export default class Scorer extends React.Component {
                             </View>
                         </View>
                         {
-                            scorer === null
-                            ?
-                            <PersonStat rank='-' playerName='-' statNum='-'/>
-                            :
-                            this.find(scorer)
+                            scorer === null ? <PersonStat rank='-' playerName='-' statNum='-'/> : this.find(scorer)
                         }
                     </View> 
                 </View>
@@ -72,6 +68,7 @@ const styles = StyleSheet.create({
         height:'auto',
         marginLeft:20,
         marginRight:20,
+        marginBottom:20,
         backgroundColor:'#ffffff',
         borderRadius:8,
         elevation:2,

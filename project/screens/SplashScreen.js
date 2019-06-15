@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from "react-native";
+import {StyleSheet, Text, View, Image,ImageBackground} from "react-native";
 import axios from "axios";
 
 export default class SplashScreen extends React.Component {
@@ -41,30 +41,25 @@ export default class SplashScreen extends React.Component {
 
     render() {
         return (
-            <View style={ styles.container }>
-                <Image source={require('../img/splash.png')} style={styles.backgroundImage} />
-                <Text style={{position:'absolute',bottom:15,fontSize:24,color:'white'}}>By Big5+</Text>
-            </View>
+                <ImageBackground  source={require('../img/splash/Splash.jpg')} style={{flex:1}}>
+                    <View style={styles.container}>
+                        <Image source={require('../img/splash/copa-america-logo.png')} style={{height:60,width:250}} />
+                        <Image source={require('../img/Big5plus.png')} resizeMode="contain" style={{ width: 80, height: 80,position:'absolute',bottom:30 }}/>
+                    </View>
+                </ImageBackground>
         );
     }
 }
 
 var styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent:'center',
-        alignItems:'center'
-    },
-    backgroundImage: {
-        flex: 1,
-        resizeMode: 'cover', // or 'stretch'
-    },
-    loginForm: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'center',
+        height:'100%',
+        justifyContent:'space-evenly',
+        borderColor:'white',
+        borderWidth:2
     },
 });
 
