@@ -41,7 +41,7 @@ export default class TopRedCard extends React.Component {
                     <View style={styles.statsContainer}>
                         <View style={styles.headerContainer}>
                             <View style={styles.leftHeader}>
-                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15,marginLeft:10,marginRight:30}}>Rank</Text>
+                                <Text style={styles.rankText}>Rank</Text>
                                 <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Player</Text>
                             </View>
                             <View style={styles.rightHeader}>
@@ -92,5 +92,12 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         flexBasis:'20%',
         justifyContent:'center',
+    },
+    rankText:{
+        color:'#bdbdbd',
+        fontWeight:'600',
+        fontSize:15,
+        marginLeft:10,
+        marginRight:30
     }
 });

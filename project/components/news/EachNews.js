@@ -18,7 +18,7 @@ export default class EachNews extends React.Component {
                         <Text style={styles.bottomCon}>{date} | Credit {author} </Text>
                     </View>
                     <View style={styles.ImageContainer}>
-                            <Image style={{resizeMode: 'cover',flex:1, borderTopRightRadius:8, borderBottomRightRadius:8,}}
+                            <Image style={styles.image}
                                    source={{uri: img}}/>
                     </View>
                     
@@ -30,8 +30,8 @@ export default class EachNews extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginLeft:25,
-        marginRight:25,
+        marginLeft:20,
+        marginRight:20,
         display:'flex',
         flexDirection:'row',
         marginBottom:10,
@@ -49,19 +49,25 @@ const styles = StyleSheet.create({
         paddingLeft:10,
         paddingRight:5,
     },
+    image:{
+        resizeMode: 'cover',
+        flex:1, 
+        borderTopRightRadius:8,
+        borderBottomRightRadius:8,
+    },
     top:{
         color:'black',
         fontWeight:'600',
-        fontSize:13
+        fontSize:12
     },
     center:{
-        fontSize:12,
+        fontSize:11,
         color:'gray',
     },
     bottomCon:{
         color:'lightgray',
         borderBottomLeftRadius:8,
-        fontSize:12
+        fontSize:11
     },
     ImageContainer:{
         flexBasis:'35%',

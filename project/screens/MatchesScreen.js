@@ -55,12 +55,12 @@ class MatchesScreen extends React.Component {
 
         return todayGameList.map((item, index) => {
 
-            console.log(item);
+            // console.log(item);
             return (
                 <View style={styles.containerPerMatch} key={index}>
                     {
                         <View style={styles.containerTop}>
-                            <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{item.gameSDate}</Text>
+                            <Text style={styles.gameDateText}>{item.gameSDate}</Text>
                         </View>
                     }
 
@@ -76,8 +76,8 @@ class MatchesScreen extends React.Component {
                                                source={{uri: item.gameLocalTeamLogo}}/>
                                         <Text style={{fontSize:14, marginLeft: 10}}>{item.gameLocalTeamName}</Text>
                                     </View>
-                                    <View style={styles.scoreContainer}>
-                                        <View style={{backgroundColor:'#f4f4f4',borderRadius:6,width:45,height:25,display:'flex',justifyContent:'center',alignItems:'center'}}>
+                                    <View style={styles.scoreWrap}>
+                                        <View style={styles.scoreDisplayContainer}>
                                             <Text style={{fontSize:14,color:'#a1a1a1'}}>
                                                 {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameLocalteamScore : item.gameLocalteamScore}
                                                 :
@@ -108,7 +108,7 @@ class MatchesScreen extends React.Component {
         });
     }
     selectedRound(round){
-        // console.log(round)
+
         fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
             method: 'GET',
             headers: {
@@ -160,20 +160,6 @@ class MatchesScreen extends React.Component {
                     {
                         todayGameList.length > 0 ? this.renderMatchesDate(todayGameList) : <Text>Loading</Text>
                     }
-
-                    {/*<MatchesDate  date='Sunday, June 16'*/}
-                    {/*              team1='Venezuela' team2='Argentina'*/}
-                    {/*              scoreTeam1='1' scoreTeam2='1'*/}
-                    {/*              team3='Qatar' team4='Brazil'*/}
-                    {/*              scoreTeam3='0' scoreTeam4='0'*/}
-                    {/*              round='1' group='A' time='90+2'/>*/}
-
-                    {/*<MatchesDate  date='Sunday, June 16' */}
-                    {/*              team1='Venezuela' team2='Argentina' */}
-                    {/*              scoreTeam1='0' scoreTeam2='0' */}
-                    {/*              team3='Qatar' team4='Brazil'*/}
-                    {/*              scoreTeam3='3' scoreTeam4='6'*/}
-                    {/*              round='1' group='B' time='24'/> */}
                 </View>
             </ScrollView>
         );
@@ -183,8 +169,6 @@ class MatchesScreen extends React.Component {
 const styles = StyleSheet.create({
     containerPerMatch:{
         marginBottom:15,
-        // borderWidth:1,
-        // borderColor:'red'
     },
     container: {
         display:'flex',
@@ -194,6 +178,13 @@ const styles = StyleSheet.create({
         paddingTop:2,
         paddingBottom:2,
         marginTop:50,
+    },
+    gameDateText:{
+        textAlign:'center',
+        fontSize:14,
+        fontWeight:'600',
+        color:'#bdbdbd',
+        marginLeft:12
     },
     dropDownContainer:{
         backgroundColor:'#ffffff',
@@ -255,12 +246,21 @@ const styles = StyleSheet.create({
         alignItems:'center',
         width:'100%',
     },
-    scoreContainer:{
+    scoreWrap:{
         display:'flex',
         flexDirection:'column',
         justifyContent:'space-between',
         alignItems:'center',
         width:50,
+    },
+    scoreDisplayContainer:{
+        display:'flex',
+        justifyContent:'center',
+        backgroundColor:'#f4f4f4',
+        alignItems:'center',
+        borderRadius:6,
+        width:45,
+        height:25,
     },
     leftTeam:{
         display:'flex',
