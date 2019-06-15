@@ -24,9 +24,8 @@ class MatchesScreen extends React.Component {
 
     componentDidMount() {
         //call here the method of api from redux
-        this.callApiMatches();
         //setInterval(() => {
-        // this.callApiMatches();
+         this.callApiMatches();
         //}, 60000)
     }
 
@@ -68,7 +67,7 @@ class MatchesScreen extends React.Component {
                     <View style={styles.containerGameRow}>
                         <View style={styles.matchDisplay}>
                             <View style={styles.matchRound}>
-                                <Text style={{fontSize:11,color:'#164095',fontWeight:'500'}}>{item.groupName.group_name}, ROUND {item.gameRound}</Text>
+                                <Text style={{fontSize:11,color:'#164095',fontWeight:'500'}}>{item.groupName.name}, ROUND {item.gameRound}</Text>
                             </View>
                             <View style={styles.matchTeams}>
                                 <View style={styles.teamScore}>
@@ -123,6 +122,9 @@ class MatchesScreen extends React.Component {
 
     render() {
         let { currentRound, todayGameList } = this.state;
+
+
+
         return (
             <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
                 <View style={styles.dropDownContainer}>

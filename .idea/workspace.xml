@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a94e8a-678b-42f9-b02a-22efd735b628" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/project/components/scorers/Scorer.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/scorers/Scorer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/table/GroupTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/GroupTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/table/TeamRowTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/TeamRowTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/TablesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/TablesScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/screens/MatchesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/MatchesScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,80 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/scorers/Scorer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="173" column="3" selection-start-line="173" selection-start-column="3" selection-end-line="173" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/scorers/PersonStat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/players/Player.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/screens/TablesScreen.js">
+        <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/scorers/Scorer2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/table/GroupTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="103" column="3" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/table/TeamRowTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="88" column="3" selection-start-line="88" selection-start-column="3" selection-end-line="88" selection-end-column="3" />
+            <state relative-caret-position="266">
+              <caret line="69" column="113" selection-start-line="69" selection-start-column="109" selection-end-line="69" selection-end-column="113" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -106,7 +34,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Component</find>
       <find>StyleSheet</find>
       <find>setMatchesDataApi</find>
       <find>matchTeams</find>
@@ -136,6 +63,7 @@
       <find>points</find>
       <find>group</find>
       <find>Pts</find>
+      <find>todayGameList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,11 +118,11 @@
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/project/src/navigators.js" />
         <option value="$PROJECT_DIR$/project/components/scorers/PersonStat.js" />
-        <option value="$PROJECT_DIR$/project/screens/MatchesScreen.js" />
         <option value="$PROJECT_DIR$/project/components/scorers/Scorer.js" />
         <option value="$PROJECT_DIR$/project/components/table/GroupTable.js" />
         <option value="$PROJECT_DIR$/project/components/table/TeamRowTable.js" />
         <option value="$PROJECT_DIR$/project/screens/TablesScreen.js" />
+        <option value="$PROJECT_DIR$/project/screens/MatchesScreen.js" />
       </list>
     </option>
   </component>
@@ -233,6 +161,20 @@
               <item name="football1" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="football1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="football1" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="matches" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="football1" type="b2602c69:ProjectViewProjectNode" />
@@ -345,12 +287,12 @@
       <workItem from="1559757434495" duration="58950000" />
       <workItem from="1560082914430" duration="16602000" />
       <workItem from="1560187169444" duration="13497000" />
-      <workItem from="1560317853197" duration="28468000" />
+      <workItem from="1560317853197" duration="30522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163426000" />
+    <option name="totallyTimeSpent" value="165480000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -365,7 +307,7 @@
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,9 +323,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" visible="true" weight="0.36511377" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" weight="0.36511377" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.8294243" weight="0.45070422" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.8294243" visible="true" weight="0.45720476" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.1705757" side_tool="true" weight="0.12459372" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -762,26 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/navigators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/screens/ScorersScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-510">
@@ -802,16 +724,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="294" column="29" selection-start-line="294" selection-start-column="29" selection-end-line="294" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/components/scorers/Scorer.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -877,6 +789,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/navigators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3536">
+          <caret line="208" column="13" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#258#453#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="69" column="113" selection-start-line="69" selection-start-column="109" selection-end-line="69" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
