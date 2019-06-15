@@ -48,7 +48,7 @@ class Scorer extends React.Component {
                     <PersonStat rank={player.position}
                                 playerName={player.name}
                                 playerImg={player.club_img}
-                                nationalTeam={player.country}
+                                nationalTeam={player.country.toString()}
                                 statNum={player.goals}
                                 backgroundColor={i%2!==0?'#f4f4f4':'#ffffff'}
                     />
@@ -67,7 +67,7 @@ class Scorer extends React.Component {
                     <View style={styles.statsContainer}>
                         <View style={styles.headerContainer}>
                             <View style={styles.leftHeader}>
-                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15,marginLeft:10,marginRight:30}}>Rank</Text>
+                                <Text style={styles.rankText}>Rank</Text>
                                 <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Player</Text>
                             </View>
                             <View style={styles.rightHeader}>
@@ -170,5 +170,12 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         flexBasis:'20%',
         justifyContent:'center',
+    },
+    rankText:{
+        color:'#bdbdbd',
+        fontWeight:'600',
+        fontSize:15,
+        marginLeft:10,
+        marginRight:30
     }
 });

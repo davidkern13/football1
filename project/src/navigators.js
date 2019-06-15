@@ -29,9 +29,9 @@ const BottomNavigator = createBottomTabNavigator(
             screen:MatchesScreen,
             navigationOptions: {
                 tabBarIcon: () => (
-                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                    // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
                         <Image  source={require('../img/Matches.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
-                    </TouchableOpacity>
+                    // </TouchableOpacity>
                 )
               },
         },
@@ -39,9 +39,9 @@ const BottomNavigator = createBottomTabNavigator(
             screen:NewsScreen,
             navigationOptions: {
                 tabBarIcon: () => (
-                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                    // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
                         <Image  source={require('../img/News.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
-                    </TouchableOpacity>
+                    // </TouchableOpacity>
                 )
               },
         },
@@ -49,9 +49,9 @@ const BottomNavigator = createBottomTabNavigator(
             screen:TablesScreen,
             navigationOptions: {
                 tabBarIcon: () => (
-                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                    // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
                         <Image  source={require('../img/Tables.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
-                    </TouchableOpacity>
+                    // </TouchableOpacity> */}
                 )
               },
             },
@@ -59,9 +59,9 @@ const BottomNavigator = createBottomTabNavigator(
             screen:StatisticsScreen,
             navigationOptions: {
                 tabBarIcon: () => (
-                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                    // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
                         <Image source={require('../img/Scorers.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
-                    </TouchableOpacity>
+                    // </TouchableOpacity>
                 )
               },
     }
@@ -72,9 +72,6 @@ const App = createStackNavigator({
     BottomNavigator: {
         screen: BottomNavigator,
         navigationOptions: ({ navigation }) => ({
-            // headerStyle: {
-            //     backgroundColor: '#0055A6',
-            // },
             headerBackground: (
                 <Image
                     style={{width:"100%", height: '100%', position: 'absolute', top: 0, left: 0}}
@@ -93,13 +90,10 @@ const App = createStackNavigator({
                     alignItems:'center'
                 }}
                 >
-                    {/* <View style={{display:'flex',flexDirection:'column',justifyContent:'center',borderColor:'red',borderWidth:1 ,flexBasis:'10%'}}> */}
                         <TouchableOpacity  onPress={()=> navigation.openDrawer()} style={{position:'absolute',left:10}}>
                             <Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}} resizeMode="contain" style={{ width: 24, height: 24  }}/>
                         </TouchableOpacity>
 
-                    {/* </View> */}
-                    {/* <View style={{ display:'flex',justifyContent:'center',borderColor:'blue',borderWidth:1,flexBasis:'90%' }}> */}
                         <TouchableOpacity  onPress={()=> navigation.openDrawer()}>
                             <Image  source={{uri: "http://www.up2me.co.il/images/85296732.png?fbclid=IwAR3WVmuh6K4l3HB4v0Y0dU-fwtPwV2_tqXeWzR8V42qsoxxnn3uL_siJ0vM"}} resizeMode="contain" style={{ width: 105, height: 50 }}/>
                         </TouchableOpacity>

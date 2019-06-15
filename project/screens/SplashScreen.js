@@ -58,8 +58,6 @@ var styles = StyleSheet.create({
         alignItems:'center',
         height:'100%',
         justifyContent:'space-evenly',
-        borderColor:'white',
-        borderWidth:2
     },
 });
 

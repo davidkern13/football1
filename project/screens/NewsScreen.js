@@ -15,7 +15,6 @@ export default class NewsScreen extends React.Component {
         }
     }
     
- 
     componentDidMount(){
         
         fetch('http://bigfiveplus.com/get-all-new-copa-america', {
@@ -30,11 +29,8 @@ export default class NewsScreen extends React.Component {
                 firstNews:res[0]}))
     }
 
-    /*
-    *  Write inside the content ,the news without first(main) item.
-    */
     writeEachNews(AllNews){
-        //remove the first item from array
+      
         this.state.news.shift();
 
        return AllNews.map((eachOne,i)=>{
@@ -57,7 +53,7 @@ export default class NewsScreen extends React.Component {
                                 :
                                 <View>
                                     {/*main news*/}
-                                    <Text style={{marginLeft:25,marginBottom:7,marginTop:20,color:'#bdbdbd',fontWeight:'700'}}>News Feed</Text>
+                                    <Text style={styles.newFeedText}>News Feed</Text>
                                     <MainNews title={firstNews.title}
                                               date={firstNews.date.substring(0,17)} 
                                               img={firstNews.img} credit={firstNews.author}
@@ -80,5 +76,12 @@ const styles = StyleSheet.create({
     loadingText:{
         fontSize:20,
         color:'green',
+    },
+    newFeedText:{
+        marginLeft:25,
+        marginBottom:7,
+        marginTop:20,
+        color:'#bdbdbd',
+        fontWeight:'700'
     }
 });

@@ -4,33 +4,39 @@ import {Button, StyleSheet, Text, View, Image,} from 'react-native';
 export default class TeamRow extends React.Component {
     render() {
 
-        let { position, teamLogo, place, win, draw, lose, goals, points } = this.props;
+        let { position, teamLogo, place, win, draw, lose, 
+            goalsFor,goalsAgainst, points,
+            backgroundColor,elevation,
+            borderBottomLeftRadius,borderBottomRightRadius } = this.props;
 
         return (
             <View style={{
                 display:'flex',
                 justifyContent:'space-between',
+                paddingRight:5,
+                paddingLeft:5,
                 alignItems:'center',
                 flexDirection:'row',
                 height:45,
-                backgroundColor:this.props.backgroundColor,
-                elevation:this.props.elevation,
-                borderBottomLeftRadius:this.props.borderBottomLeftRadius,
-                borderBottomRightRadius:this.props.borderBottomRightRadius
+                backgroundColor,
+                elevation,
+                borderBottomLeftRadius,
+                borderBottomRightRadius
             }}>
-
-                <View style={styles.statsLeft}>
+                <View style={styles.teamPlaceContainer}>
                     <Text style={styles.placeNum}>{position}</Text>
-                    <Image style={styles.teamLogo} source={{uri: teamLogo}}/>
-                    <Text style={styles.teamName}>{place}</Text>
+                    <View style={styles.teamDataContainer}>
+                        <Image style={styles.teamLogo} source={{uri : teamLogo}}/>
+                        <Text style={styles.teamName}>{place}</Text>
+                    </View>
                 </View>
-
-                <View style={styles.statsRight}>
+                <View style={styles.teamStats}>
                     <Text style={styles.points}>{win}</Text>
                     <Text style={styles.points}>{draw}</Text>
                     <Text style={styles.points}>{lose}</Text>
-                    <Text style={styles.points}>{goals}</Text>
-                    <Text style={styles.points}>{points}</Text>
+                    <Text style={styles.points}>{goalsFor}</Text>
+                    <Text style={styles.points}>{goalsAgainst}</Text>
+                    <Text style={[styles.points,styles.boldWeight]}>{points}</Text>
                 </View>
             </View>
         );
@@ -38,25 +44,24 @@ export default class TeamRow extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    teamStats:{
-
-    },
-    statsLeft:{
+ 
+    teamPlaceContainer:{
         display:'flex',
         flexDirection:'row',
-        color:'black',
-        width:'auto',
-        flex:4,
-        justifyContent:'flex-start',
         alignItems:'center',
-        paddingLeft:0,
+        justifyContent:'space-between',
+        color:'black',
     },
-    statsRight:{
+    teamDataContainer:{
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    teamStats:{
         display:'flex',
         flexDirection:'row',
         color:'black',
-        width:'auto',
-        flex:3,
+        flexBasis:'40%',
         justifyContent:'space-between',
     },
     teamLogo: {
@@ -66,16 +71,14 @@ const styles = StyleSheet.create({
         marginRight:8
     },
     placeNum:{
-        borderRadius:100,
-        fontSize:12,
-        width:12,
+        fontSize:13,
+        marginRight:15,
         textAlign:'center',
+        fontWeight:'700'
     },
     points:{
-        fontSize:11,
-        fontWeight:'500',
-        flex:1,
-        textAlign:'center',
+        fontSize:12,
+        fontWeight:'100',
     },
     teamName:{
         display:'flex',
@@ -83,7 +86,9 @@ const styles = StyleSheet.create({
         alignItems:'center',
         width:'auto',
         fontSize:13,
-        flex: 1,
         fontWeight:'100'
+    },
+    boldWeight:{
+        fontWeight:'700'
     }
 });

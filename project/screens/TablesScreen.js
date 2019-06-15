@@ -23,7 +23,7 @@ export default class TablesScreen extends React.Component {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-        }).then(res=>res.json()).then(res=>this.setState({ table:res}))
+        }).then(res=>res.json()).then(res=>this.setState({ table:res }))
     }
 
     sortTeam(teamsArr){
@@ -44,7 +44,8 @@ export default class TablesScreen extends React.Component {
                              win={eachTeam.overall.won}
                              draw={eachTeam.overall.draw}
                              lose={eachTeam.overall.lost}
-                             goals={(eachTeam.overall.goals_scored + ':' + eachTeam.overall.goals_against)}
+                             goalsFor={eachTeam.overall.goals_scored}
+                             goalsAgainst={eachTeam.overall.goals_against}
                              points={eachTeam.total.points}
                              elevation={eachTeam.position % 4  !== 0 ? 0 : 1}
                              borderBottomLeftRadius={eachTeam.position % 4 !==0? 0 : 8 }
@@ -75,15 +76,15 @@ export default class TablesScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
-        marginBottom:20
+        marginBottom:20,
     },
     loadingText:{
         fontSize:20,
         color:'green',
     },
     containerWrapTables:{
-        marginLeft:10,
-        marginRight:10,
+        marginLeft:15,
+        marginRight:15,
     }
 
 });

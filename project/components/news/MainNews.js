@@ -16,16 +16,7 @@ export default class MainNews extends React.Component {
                 <ImageBackground style={{height:'100%',borderRadius:8,resizeMode:'cover'}} 
                                  imageStyle={{ borderRadius: 8}}
                                  source={{uri:'http://www.up2me.co.il/images/92093494.png?fbclid=IwAR17g4s8AueIAt5XZyc5Z0ecnx2aavSF8Y9ev7ZsuIrUBkjYJaOTDLveZuE'}}>
-                    <View style={{  position:'absolute',
-                                    display:'flex',
-                                    flexDirection:'column',
-                                    justifyContent:'center',
-                                    alignItems:'flex-start',
-                                    height:60,
-                                    bottom:0,
-                                    borderRadius:8,
-                                    padding:11,
-                                    }}>
+                    <View style={styles.textContainer}>
                             <Text style={styles.text}>{title}</Text>
                             <Text style={styles.text}>{date} | Credit : {credit} </Text>
                     </View>
@@ -40,21 +31,22 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'column',
         justifyContent:'flex-end',
-        marginLeft:25,
-        marginRight:25,
+        marginLeft:20,
+        marginRight:20,
         marginBottom:10,
         resizeMode: 'cover',
         maxHeight:220,
     },
-    headerBackground:{
-        // display:'flex',
-        // flexDirection:'column',
-        // justifyContent:'center',
-        // backgroundColor:'blue',
-        // height:45,
-        // opacity:.3,
-        // borderBottomLeftRadius:8,
-        // borderBottomRightRadius:8
+    textContainer:{
+        position:'absolute',
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'flex-start',
+        height:60,
+        bottom:0,
+        borderRadius:8,
+        padding:11,
     },
     headerTitle:{
         display:'flex',
