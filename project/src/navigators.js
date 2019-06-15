@@ -15,7 +15,7 @@ import {
 
 import MatchesScreen from '../screens/MatchesScreen';
 import TablesScreen from '../screens/TablesScreen';
-import ScorersScreen from '../screens/ScorersScreen';
+import ScorersScreen from '../components/scorers/Scorer';
 import NewsScreen from '../screens/NewsScreen';
 import SettingsScreen from "../screens/SettingsScreen";
 import StatisticsScreen from "../screens/StatisticsScreen";
@@ -158,15 +158,15 @@ const MyApp = createDrawerNavigator({
             },
         },
     },
-    {
-        shifting: false,
-        backBehavior: 'initialRoute',
-        activeColor: 'white',
-        tabBarColor: 'blue',
-        inactiveTintColor: 'black',
-        barStyle: { backgroundColor: 'orange' },
-        swipeEnabled: true
-    }
+    // {
+    //     shifting: false,
+    //     backBehavior: 'initialRoute',
+    //     activeColor: 'white',
+    //     tabBarColor: 'blue',
+    //     inactiveTintColor: 'black',
+    //     barStyle: { backgroundColor: 'orange' },
+    //     swipeEnabled: true
+    // }
 );
 
 // export default createAppContainer(MyApp);

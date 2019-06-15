@@ -51,7 +51,7 @@ export const getApisUrls = (value, all) =>{
         matches:'http://bigfiveplus.com/get-all-new-copa-america',
         tables:'https://bigfiveplus.com/standings-tables-api/copa-america',
         news:'http://bigfiveplus.com/get-all-new-copa-america',
-        scorers:'https://bigfiveplus.com/scorers-api/copa-america',
+        scorers:'https://bigfiveplus.com/scorers-api/ligue-1',
         matchbyid:'https://bigfiveplus.com/getMatchById/', //{id} in the end
         matchtoday:'https://bigfiveplus.com/today-games-api/copa-america',
         currentround:'https://bigfiveplus.com/get-current-round/copa-america',

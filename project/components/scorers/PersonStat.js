@@ -11,8 +11,8 @@ export default class PersonStat extends React.Component {
                             <Image source={{uri:this.props.playerImg}}
                                    style={{height:27,width:27,borderRadius:100}}/>
                             <View style={styles.playerStats}>
-                                <Text style={{fontWeight:'700',fontSize:15}}>{this.props.playerName}</Text>
-                                <Text style={{fontWeight:'700',fontSize:15,color:'#bdbdbd'}}>{this.props.nationalTeam}</Text>
+                                <Text style={{fontWeight:'400',fontSize:13}}>{this.props.playerName}</Text>
+                                <Text style={{fontWeight:'400',fontSize:11,color:'#bdbdbd'}}>{this.props.nationalTeam}</Text>
                             </View>
                         </View>
                     </View>

@@ -20,11 +20,6 @@ export default class App extends React.Component {
 
     componentDidMount(){
 
-
-
-        let res = getStartedData();
-        console.log('------res---------', res);
-
         setTimeout(() =>
             {
                 this.setState({

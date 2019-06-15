@@ -4,7 +4,8 @@ import {Button, StyleSheet, Text, View, Image,} from 'react-native';
 export default class TeamRow extends React.Component {
     render() {
 
-        let { teamLogo, place, win, draw, lose, points } = this.props;
+        let { position, teamLogo, place, win, draw, lose, goals, points } = this.props;
+
         return (
             <View style={{
                 display:'flex',
@@ -12,13 +13,15 @@ export default class TeamRow extends React.Component {
                 alignItems:'center',
                 flexDirection:'row',
                 height:45,
-                paddingRight:15,
-                backgroundColor:this.props.backgroundColor
+                backgroundColor:this.props.backgroundColor,
+                elevation:this.props.elevation,
+                borderBottomLeftRadius:this.props.borderBottomLeftRadius,
+                borderBottomRightRadius:this.props.borderBottomRightRadius
             }}>
 
                 <View style={styles.statsLeft}>
-                    {/* <Text style={styles.placeNum}>2</Text>              */}
-                    <Image style={{width: 24, height: 24, borderRadius: 100, marginRight:8}} source={{uri: teamLogo}}/>
+                    <Text style={styles.placeNum}>{position}</Text>
+                    <Image style={styles.teamLogo} source={{uri: teamLogo}}/>
                     <Text style={styles.teamName}>{place}</Text>
                 </View>
 
@@ -26,6 +29,7 @@ export default class TeamRow extends React.Component {
                     <Text style={styles.points}>{win}</Text>
                     <Text style={styles.points}>{draw}</Text>
                     <Text style={styles.points}>{lose}</Text>
+                    <Text style={styles.points}>{goals}</Text>
                     <Text style={styles.points}>{points}</Text>
                 </View>
             </View>
@@ -35,44 +39,51 @@ export default class TeamRow extends React.Component {
 
 const styles = StyleSheet.create({
     teamStats:{
-        
+
     },
     statsLeft:{
         display:'flex',
         flexDirection:'row',
         color:'black',
-        width:170,
+        width:'auto',
+        flex:4,
         justifyContent:'flex-start',
         alignItems:'center',
-        paddingLeft:25,
-    },
-    placeNum:{
-        borderRadius:100,
-        fontSize:14,
-        width:29,
-        height:29,
-        borderWidth:1,
-        backgroundColor:'#e5ffe5',
-        textAlign:'center',
-        borderColor:'green',
+        paddingLeft:0,
     },
     statsRight:{
         display:'flex',
         flexDirection:'row',
         color:'black',
-        width:125,
+        width:'auto',
+        flex:3,
         justifyContent:'space-between',
     },
-    points:{
+    teamLogo: {
+        width: 24,
+        height: 24,
+        borderRadius: 100,
+        marginRight:8
+    },
+    placeNum:{
+        borderRadius:100,
         fontSize:12,
+        width:12,
+        textAlign:'center',
+    },
+    points:{
+        fontSize:11,
         fontWeight:'500',
+        flex:1,
+        textAlign:'center',
     },
     teamName:{
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        width:80,
+        width:'auto',
         fontSize:13,
+        flex: 1,
         fontWeight:'100'
     }
 });

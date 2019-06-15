@@ -14,15 +14,17 @@ export default class Group extends React.Component {
                     <Text style={styles.text}>{this.props.group}</Text>
                 </View>
                 <View style={{borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
-                    <View style={styles.containerTop}>
-                        <View>
-                            <Text style={{color:'#a1a1a1',paddingLeft:11,fontSize:14,fontWeight:'500'}}>Team</Text>
+                    <View style={[styles.containerTop, styles.flexRowBetwen]}>
+                        <View style={[styles.wrapContainerTableRowTeam, styles.flexRowBetwen]}>
+                            <Text style={[styles.titleTableRowTeam, styles.titlePosRowTeam]}>#</Text>
+                            <Text style={styles.titleTableRowTeam}>Team</Text>
                         </View>
-                        <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',width:133}}>
-                            <Text style={styles.textR}>W</Text>
-                            <Text style={styles.textR}>D</Text>
-                            <Text style={styles.textR}>L</Text>
-                            <Text style={styles.textRPoints}>Pts</Text>
+                        <View style={[styles.wrapContainerTableRow, styles.flexRowBetwen]}>
+                            <Text style={styles.titleTableRow}>W</Text>
+                            <Text style={styles.titleTableRow}>D</Text>
+                            <Text style={styles.titleTableRow}>L</Text>
+                            <Text style={styles.titleTableRow}>G</Text>
+                            <Text style={styles.titleTableRowPoints}>Pts</Text>
                         </View>
                     </View>
                     <View style={styles.teamsContainer}>
@@ -43,49 +45,60 @@ const styles = StyleSheet.create({
         display:'flex',
         marginBottom:20,
         marginTop:20,
-        marginLeft:15,
-        marginRight:15,
         backgroundColor:'#f4f4f4',
     },
     groupContainer:{
         backgroundColor:'#f4f4f4',
     },
-
+    titleTableRowTeam : {
+        color:'#a1a1a1',
+        fontSize:13,
+        fontWeight:'500',
+    },
+    titlePosRowTeam : {
+        width:12,
+    },
+    wrapContainerTableRowTeam : {
+        flex:4,
+    },
+    wrapContainerTableRow : {
+        flex:3,
+    },
     containerTop:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-between',
         alignItems:'center',
         height:30,
         color:'gray',
         backgroundColor:'#ffffff',
         fontSize:16,
-        paddingLeft: 10,
-        paddingRight:10,
         borderTopLeftRadius: 8,
         borderTopRightRadius: 8,
         borderColor:'red'
     },
     text:{
-        marginLeft:3,
-        fontSize: 14,
+        fontSize: 13,
         color:'#bdbdbd',
-        fontWeight:'700',
-        marginBottom:3
-    },
-    textR: {
-        fontSize:14,
-        color:'#a1a1a1',
         fontWeight:'500',
     },
-    textRPoints:{
-        fontSize:14,
+    titleTableRow: {
+        fontSize:13,
         color:'#a1a1a1',
-        fontWeight:'500',
-        marginLeft:-5,
+        fontWeight:'400',
+        flex: 1,
+        textAlign:'center',
+    },
+    titleTableRowPoints:{
+        fontSize:13,
+        color:'#a1a1a1',
+        fontWeight:'400',
+        flex: 1
     },
     teamsContainer:{
         display:'flex',
         flexDirection:'column',
+    },
+    flexRowBetwen : {
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-between'
     }
 });

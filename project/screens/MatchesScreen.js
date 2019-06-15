@@ -1,8 +1,9 @@
 import React from 'react';
-import {Platform, Button, StyleSheet, Text, View, StatusBar, ScrollView, Image} from 'react-native';
+import {Platform, Button, StyleSheet, Text, View, Dimensions, ScrollView, Image, Picker} from 'react-native';
 import MatchesDate from '../components/matches/MatchesDate';
 import { getApisUrls } from '../api/api';
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
+const width = Dimensions.get('window').width;
 
 class MatchesScreen extends React.Component {
 
@@ -11,8 +12,12 @@ class MatchesScreen extends React.Component {
 
         /* default state */
         this.state = {
-            currentRound: 1,
-            todayGameList: {}
+            currentRound: null,
+            fetchUrls:[
+                'https://bigfiveplus.com/competition/copa-america/get-rounds',
+                'https://bigfiveplus.com/get-stages/copa-america',
+            ],
+            todayGameList: {},
         }
 
     }
@@ -21,7 +26,7 @@ class MatchesScreen extends React.Component {
         //call here the method of api from redux
         this.callApiMatches();
         //setInterval(() => {
-            // this.callApiMatches();
+        // this.callApiMatches();
         //}, 60000)
     }
 
@@ -32,60 +37,63 @@ class MatchesScreen extends React.Component {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-        }).then((dataStr) => {
-            fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + parseInt(dataStr._bodyInit)).then((response) => response.json()).then((responseData) => {
-                this.setState({
-                    currentRound:  parseInt(dataStr._bodyInit),
-                    todayGameList: responseData
-                })
-            }).done();
         })
-        .catch((error) => {
-            console.error(error);
-        });
+            .then((dataStr) => {
+                fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + parseInt(dataStr._bodyInit)).then((response) => response.json()).then((responseData) => {
+                    this.setState({
+                        currentRound:  parseInt(dataStr._bodyInit),
+                        todayGameList: responseData
+                    });
+
+                }).done();
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
 
     renderMatchesDate(todayGameList) {
 
         return todayGameList.map((item, index) => {
-            // console.log(item)
-            return (
-                <View style={styles.container} key={index}>
-                {
-                    <View style={styles.containerTop}>
-                        <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{item.gameSDate}</Text>
-                    </View>
-                }
 
-                <View style={styles.containerGameRow}>
-                    <View style={styles.matchDisplay}>
-                        <View style={styles.matchRound}>
-                            <Text style={{fontSize:11,color:'#164095',fontWeight:'500'}}>GROUP {this.props.group}, ROUND {item.gameRound}</Text>
+            console.log(item);
+            return (
+                <View style={styles.containerPerMatch} key={index}>
+                    {
+                        <View style={styles.containerTop}>
+                            <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{item.gameSDate}</Text>
                         </View>
-                        <View style={styles.matchTeams}>
-                            <View style={styles.teamScore}>
-                                <View style={styles.leftTeam}>
-                                    <Image style={{width: 30, height: 30, borderRadius: 100}}
-                                           source={{uri: item.gameLocalTeamLogo}}/>
-                                    <Text style={{fontSize:14, marginLeft: 10}}>{item.gameLocalTeamName}</Text>
-                                </View>
-                                <View style={styles.scoreContainer}>
-                                    <View style={{backgroundColor:'#f4f4f4',borderRadius:6,width:45,height:25,display:'flex',justifyContent:'center',alignItems:'center'}}>
-                                        <Text style={{fontSize:14,color:'#a1a1a1'}}>
-                                            {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameLocalteamScore : ` - `}
-                                            :
-                                            {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameVisitorTeamScore : ` - `}
-                                        </Text>
+                    }
+
+                    <View style={styles.containerGameRow}>
+                        <View style={styles.matchDisplay}>
+                            <View style={styles.matchRound}>
+                                <Text style={{fontSize:11,color:'#164095',fontWeight:'500'}}>{item.groupName.group_name}, ROUND {item.gameRound}</Text>
+                            </View>
+                            <View style={styles.matchTeams}>
+                                <View style={styles.teamScore}>
+                                    <View style={styles.leftTeam}>
+                                        <Image style={{width: 30, height: 30, borderRadius: 100}}
+                                               source={{uri: item.gameLocalTeamLogo}}/>
+                                        <Text style={{fontSize:14, marginLeft: 10}}>{item.gameLocalTeamName}</Text>
+                                    </View>
+                                    <View style={styles.scoreContainer}>
+                                        <View style={{backgroundColor:'#f4f4f4',borderRadius:6,width:45,height:25,display:'flex',justifyContent:'center',alignItems:'center'}}>
+                                            <Text style={{fontSize:14,color:'#a1a1a1'}}>
+                                                {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameLocalteamScore : item.gameLocalteamScore}
+                                                :
+                                                {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameVisitorTeamScore : item.gameVisitorTeamScore}
+                                            </Text>
+                                        </View>
+                                    </View>
+                                    <View style={styles.rightTeam}>
+                                        <Text style={{fontSize:14,  marginRight: 10}}>{item.gameVisitorTeamName}</Text>
+                                        <Image style={{width: 30, height: 30, borderRadius: 100}}
+                                               source={{uri: item.gameVisitorTeamLogo}}/>
                                     </View>
                                 </View>
-                                <View style={styles.rightTeam}>
-                                    <Text style={{fontSize:14,  marginRight: 10}}>{item.gameVisitorTeamName}</Text>
-                                    <Image style={{width: 30, height: 30, borderRadius: 100}}
-                                           source={{uri: item.gameVisitorTeamLogo}}/>
-                                </View>
                             </View>
-                        </View>
-                        { item.gameStatus === "LIVE" &&
+                            { item.gameStatus === "LIVE" &&
                             <View style={styles.timeContainer}>
                                 <Text style={{color:'#a1a1a1',fontSize:12}}>
                                     {item.gameTimeMinnute}
@@ -93,19 +101,58 @@ class MatchesScreen extends React.Component {
                                     '</Text>
                                 <Text style={{backgroundColor:'#36bc4f',borderRadius:100,width:6,height:6}}></Text>
                             </View>
-                        }
+                            }
+                        </View>
                     </View>
-                </View>
                 </View>
             )
         });
     }
-
+    selectedRound(round){
+        // console.log(round)
+        fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(res=>res.json())
+            .then(res=>this.setState({ todayGameList:res }))
+    }
 
     render() {
         let { currentRound, todayGameList } = this.state;
         return (
             <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
+                <View style={styles.dropDownContainer}>
+                    <Picker selectedValue={this.state.currentRound}
+                            mode='dropdown'
+                            style={{
+                                display:'flex',
+                                flexDirection:'row',
+                                justifyContent:'space-between',
+                                alignItems:'center',
+                                width:width,
+                                height:40,
+                            }}
+                            onValueChange={itemValue =>
+                            {
+                                this.setState({currentRound: itemValue});
+                                this.selectedRound(itemValue);
+                            }}>
+                        {
+
+                        }
+                        <Picker.Item label="1st Round - 2019-06-15/2019-06-17" value="1"/>
+                        <Picker.Item label="2nd Round - 2019-06-15/2019-06-17" value="2" />
+                        <Picker.Item label="3rd Round - 2019-06-15/2019-06-17" value="3" />
+                        <Picker.Item label="Quarter Final - 2019-06-15/2019-06-17" value="Quarter Finals" />
+                        <Picker.Item label="Semi Final - 2019-06-15/2019-06-17" value="Semi Finals" />
+                        <Picker.Item label="3rd place - 2019-06-15" value="3rd place" />
+                        <Picker.Item label="Final - 2019-06-15" value="Final" />
+                    </Picker>
+                </View>
                 <View style={styles.container}>
 
                     {
@@ -132,10 +179,32 @@ class MatchesScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    containerPerMatch:{
+        marginBottom:15,
+        // borderWidth:1,
+        // borderColor:'red'
+    },
     container: {
         display:'flex',
         flexDirection:'column',
-        padding:10
+        paddingLeft:10,
+        paddingRight:10,
+        paddingTop:2,
+        paddingBottom:2,
+        marginTop:50,
+    },
+    dropDownContainer:{
+        backgroundColor:'#ffffff',
+        elevation:.4,
+        paddingLeft:30,
+        paddingRight:30,
+        position:'absolute',
+        top:0,
+        width:'100%',
+        display:'flex',
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'space-between'
     },
     containerTop:{
         display:'flex',
