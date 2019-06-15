@@ -26,12 +26,18 @@ class Scorer extends React.Component {
     }
 
     componentDidMount(){
+<<<<<<< HEAD
         fetch('https://bigfiveplus.com/scorers-api/copa-america', {
+=======
+        
+        fetch('https://bigfiveplus.com/scorers-api/ligue-1', {
+>>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
             method: 'GET',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
+<<<<<<< HEAD
         }).then(res=>res.json()).then(res=>this.setState({
             scorer:res.topPlayersList
         }))
@@ -54,6 +60,20 @@ class Scorer extends React.Component {
                     />
                 </TouchableOpacity>
             )
+=======
+        }).then(res=>res.json()).then(res=>this.setState({scorer:res.topPlayersList}))
+    }
+
+    find(stats){
+       return stats.map((player,i)=>{       
+            return ( <PersonStat key={i} 
+                                 backgroundColor={i%2!==0?'#f4f4f4':'#ffffff'}
+                                 rank={player.position}
+                                 playerName={player.name} 
+                                 playerImg={player.club_img}
+                                 nationalTeam={player.country.substring(1,player.country.length-1)}
+                                 statNum={player.goals}/>)
+>>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
         })
     }
 
@@ -75,11 +95,7 @@ class Scorer extends React.Component {
                             </View>
                         </View>
                         {
-                            scorer === null
-                            ?
-                            <PersonStat rank='-' playerName='-' statNum='-'/>
-                            :
-                            this.find(scorer)
+                            scorer === null ? <PersonStat rank='-' playerName='-' statNum='-'/> : this.find(scorer)
                         }
                     </View>
                 </View>
@@ -148,8 +164,14 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         marginTop:25,
         height:'auto',
+<<<<<<< HEAD
         marginLeft:10,
         marginRight:10,
+=======
+        marginLeft:20,
+        marginRight:20,
+        marginBottom:20,
+>>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
         backgroundColor:'#ffffff',
         borderRadius:8,
         elevation:1,

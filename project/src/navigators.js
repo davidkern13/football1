@@ -25,11 +25,47 @@ import HomeScreen from "../screens/HomeScreen";
 
 const BottomNavigator = createBottomTabNavigator(
     {
-        Matches: MatchesScreen,
-        News: NewsScreen,
-        Tables: TablesScreen,
-        Stats: StatisticsScreen,
+        Matches: {
+            screen:MatchesScreen,
+            navigationOptions: {
+                tabBarIcon: () => (
+                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                        <Image  source={require('../img/Matches.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                    </TouchableOpacity>
+                )
+              },
+        },
+        News: {
+            screen:NewsScreen,
+            navigationOptions: {
+                tabBarIcon: () => (
+                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                        <Image  source={require('../img/News.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                    </TouchableOpacity>
+                )
+              },
+        },
+        Tables: {
+            screen:TablesScreen,
+            navigationOptions: {
+                tabBarIcon: () => (
+                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                        <Image  source={require('../img/Tables.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                    </TouchableOpacity>
+                )
+              },
+            },
+        Statistics: {
+            screen:StatisticsScreen,
+            navigationOptions: {
+                tabBarIcon: () => (
+                    <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
+                        <Image source={require('../img/Scorers.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                    </TouchableOpacity>
+                )
+              },
     }
+}
 );
 
 const App = createStackNavigator({
@@ -97,7 +133,7 @@ const MyApp = createDrawerNavigator({
                 drawerIcon: (
                     <Image
                         style={{ width: 24, height: 24 }}
-                        source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
+                        source={require('../img/News.png')}
                     />
                 ),
             },
@@ -108,7 +144,7 @@ const MyApp = createDrawerNavigator({
                 drawerIcon: (
                     <Image
                         style={{ width: 24, height: 24 }}
-                        source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
+                        source={require('../img/Matches.png')}
                     />
                 ),
             },
@@ -119,7 +155,7 @@ const MyApp = createDrawerNavigator({
                 drawerIcon: (
                     <Image
                         style={{ width: 24, height: 24 }}
-                        source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
+                        source={require('../img/Tables.png')}
                     />
                 ),
             },
@@ -130,7 +166,7 @@ const MyApp = createDrawerNavigator({
                 drawerIcon: (
                     <Image
                         style={{ width: 24, height: 24 }}
-                        source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
+                        source={require('../img/Scorers.png')}
                     />
                 ),
             },

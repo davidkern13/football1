@@ -31,32 +31,37 @@ export default class NewsScreen extends React.Component {
     }
 
     /*
-    *  Write to the content the news withour first(main) item
+    *  Write inside the content ,the news without first(main) item.
     */
     writeEachNews(AllNews){
-        //remove the first position from array
+        //remove the first item from array
         this.state.news.shift();
 
        return AllNews.map((eachOne,i)=>{
-            return ( <EachNews key={i} title={eachOne.title.substring(0,40)} date={eachOne.date} img={eachOne.img} author={eachOne.author}/> )
+            return ( <EachNews key={i} title={eachOne.title} 
+                               date={eachOne.date.substring(0,17)} img={eachOne.img} author={eachOne.author}
+                               content={eachOne.description.substring(0,60)+'...'}/> )
         })
     }
     render() {
         const { news, firstNews} = this.state;
 
         return (
-            <ScrollView style={{flex:1}}>
+        <ScrollView style={{flex:1, backgroundColor: '#f4f4f4'}}>
                 <View style={styles.container}>
                     {/*<EachNews />*/}
                         {
                             news === null
                                 ?
-                                <Text>Loading</Text>
+                                <Text style={styles.loadingText}>Loading...</Text>
                                 :
                                 <View>
                                     {/*main news*/}
                                     <Text style={{marginLeft:25,marginBottom:7,marginTop:20,color:'#bdbdbd',fontWeight:'700'}}>News Feed</Text>
-                                    <MainNews title={firstNews.title.substring(0,40)} date={firstNews.date} img={firstNews.img} credit={firstNews.author} />
+                                    <MainNews title={firstNews.title}
+                                              date={firstNews.date.substring(0,17)} 
+                                              img={firstNews.img} credit={firstNews.author}
+                                              content={firstNews.description.substring(0,60)+'...'} />
                                     {/*each news*/}
                                     {this.writeEachNews(news)}
                                 </View>
@@ -69,9 +74,11 @@ export default class NewsScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-
         display:'flex',
         flexDirection:'column',
-        backgroundColor: '#f4f4f4',
     },
+    loadingText:{
+        fontSize:20,
+        color:'green',
+    }
 });

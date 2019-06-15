@@ -13,11 +13,19 @@ export default class Group extends React.Component {
                 <View style={styles.groupContainer}>
                     <Text style={styles.text}>{this.props.group}</Text>
                 </View>
+<<<<<<< HEAD
                 <View style={{borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
                     <View style={[styles.containerTop, styles.flexRowBetwen]}>
                         <View style={[styles.wrapContainerTableRowTeam, styles.flexRowBetwen]}>
                             <Text style={[styles.titleTableRowTeam, styles.titlePosRowTeam]}>#</Text>
                             <Text style={styles.titleTableRowTeam}>Team</Text>
+=======
+                <View style={{display:'flex',flexDirection:'column',
+                        borderTopLeftRadius: 8, borderTopRightRadius: 8 ,borderColor:'#f4f4f4',borderWidth:1}}>
+                    <View style={styles.containerTop}>
+                        <View>
+                            <Text style={{color:'#a1a1a1',paddingLeft:11,fontSize:14,fontWeight:'500'}}>Team</Text>
+>>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                         </View>
                         <View style={[styles.wrapContainerTableRow, styles.flexRowBetwen]}>
                             <Text style={styles.titleTableRow}>W</Text>
@@ -29,10 +37,6 @@ export default class Group extends React.Component {
                     </View>
                     <View style={styles.teamsContainer}>
                         {this.props.children}
-                        {/* <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
-                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
-                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/>
-                        <TeamRow place={this.props.place}  teamLogo={this.props.teamLogo} win={this.props.win} draw={this.props.draw} lose={this.props.lose} points={this.props.points}/> */}
                     </View>
                 </View>
             </View>
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
     },
     containerTop:{
         alignItems:'center',
-        height:30,
+        height:40,
         color:'gray',
         backgroundColor:'#ffffff',
         fontSize:16,
@@ -95,10 +99,14 @@ const styles = StyleSheet.create({
     teamsContainer:{
         display:'flex',
         flexDirection:'column',
+<<<<<<< HEAD
     },
     flexRowBetwen : {
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-between'
+=======
+        marginTop:-30,
+>>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
     }
 });

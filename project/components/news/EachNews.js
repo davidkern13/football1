@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         marginRight:25,
         display:'flex',
         flexDirection:'row',
-        marginBottom:20,
+        marginBottom:10,
         borderRadius:8,
         height:110,
     },
