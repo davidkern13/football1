@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Platform, Button, StyleSheet, Text, View, Dimensions, ScrollView, Image, Picker} from 'react-native';
-=======
-import {Platform, Button, StyleSheet, Text, View, StatusBar, ScrollView, Image, Picker} from 'react-native';
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
 import MatchesDate from '../components/matches/MatchesDate';
 import { getApisUrls } from '../api/api';
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
@@ -41,18 +37,6 @@ class MatchesScreen extends React.Component {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-<<<<<<< HEAD
-=======
-        })
-        .then((dataStr) => {
-            fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + parseInt(dataStr._bodyInit)).then((response) => response.json()).then((responseData) => {
-                this.setState({
-                    currentRound:  parseInt(dataStr._bodyInit),
-                    todayGameList: responseData
-                });
-               
-            }).done();
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
         })
             .then((dataStr) => {
                 fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + parseInt(dataStr._bodyInit)).then((response) => response.json()).then((responseData) => {
@@ -71,17 +55,6 @@ class MatchesScreen extends React.Component {
     renderMatchesDate(todayGameList) {
 
         return todayGameList.map((item, index) => {
-<<<<<<< HEAD
-=======
-         
-            return (
-                <View style={styles.containerPerMatch} key={index}>
-                {
-                    <View style={styles.containerTop}>
-                        <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{item.gameSDate}</Text>
-                    </View>
-                }
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
 
             console.log(item);
             return (
@@ -125,7 +98,7 @@ class MatchesScreen extends React.Component {
                                 <Text style={{color:'#a1a1a1',fontSize:12}}>
                                     {item.gameTimeMinnute}
                                     {parseInt(item.gameTimeInjuryTime) >= 0 ? item.gameTimeInjuryTime : ''}
-                                '</Text>
+                                    '</Text>
                                 <Text style={{backgroundColor:'#36bc4f',borderRadius:100,width:6,height:6}}></Text>
                             </View>
                             }
@@ -135,51 +108,31 @@ class MatchesScreen extends React.Component {
             )
         });
     }
-<<<<<<< HEAD
     selectedRound(round){
         // console.log(round)
         fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
-=======
-
-    selectedRound(round){
-        // console.log(round)
-         fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
             method: 'GET',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
         })
-<<<<<<< HEAD
             .then(res=>res.json())
             .then(res=>this.setState({ todayGameList:res }))
-=======
-        .then(res=>res.json())
-        .then(res=>this.setState({ todayGameList:res }))
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
     }
 
     render() {
         let { currentRound, todayGameList } = this.state;
         return (
             <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
-<<<<<<< HEAD
                 <View style={styles.dropDownContainer}>
                     <Picker selectedValue={this.state.currentRound}
                             mode='dropdown'
                             style={{
-=======
-                    <View style={styles.dropDownContainer}>
-                      <Picker selectedValue={this.state.currentRound}
-                             mode='dropdown'
-                             style={{
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                                 display:'flex',
                                 flexDirection:'row',
                                 justifyContent:'space-between',
                                 alignItems:'center',
-<<<<<<< HEAD
                                 width:width,
                                 height:40,
                             }}
@@ -200,28 +153,6 @@ class MatchesScreen extends React.Component {
                         <Picker.Item label="Final - 2019-06-15" value="Final" />
                     </Picker>
                 </View>
-=======
-                                width:'100%',
-                                height:35,
-                           }}
-                            onValueChange={itemValue =>
-                                {
-                                this.setState({currentRound: itemValue});
-                                this.selectedRound(itemValue);
-                            }}>
-                                {
-
-                                }
-                            <Picker.Item label="Round 1" value="1"/>
-                            <Picker.Item label="Round 2" value="2" />
-                            <Picker.Item label="Round 3" value="3" />
-                            <Picker.Item label="Quarter Final" value="Quarter Finals" />
-                            <Picker.Item label="Semi Final" value="Semi Finals" />
-                            <Picker.Item label="3rd place" value="3rd place" />
-                            <Picker.Item label="Final" value="Final" />
-                        </Picker>
-                    </View>
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                 <View style={styles.container}>
 
                     {

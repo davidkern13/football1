@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a94e8a-678b-42f9-b02a-22efd735b628" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/components/players/Player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/components/scorers/Scorer2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/containers/scorers/ScorerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/containers/scorers/ScorerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/scorers/PersonStat.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/scorers/PersonStat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/scorers/Scorer.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/scorers/Scorer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/table/GroupTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/GroupTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/components/table/TeamRowTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/components/table/TeamRowTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/screens/MatchesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/MatchesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/screens/TablesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/screens/TablesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/navigators.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/navigators.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,47 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/screens/TablesScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="36" column="46" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="46" />
-              <folding>
-                <element signature="e#389#415#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/table/GroupTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="63" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/components/table/TeamRowTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="77" column="4" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="27" />
+            <state relative-caret-position="501">
+              <caret line="294" column="29" selection-start-line="294" selection-start-column="29" selection-end-line="294" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -107,9 +60,9 @@
       <find>titlePosRowTeam</find>
       <find>titleTableRowTeam</find>
       <find>teamLogo</find>
-      <find>points</find>
       <find>matchDisplay</find>
       <find>wrapContainer</find>
+      <find>points</find>
       <find>group</find>
       <find>Pts</find>
     </findStrings>
@@ -314,14 +267,14 @@
       <workItem from="1559757434495" duration="58950000" />
       <workItem from="1560082914430" duration="16602000" />
       <workItem from="1560187169444" duration="13497000" />
-      <workItem from="1560317853197" duration="27631000" />
+      <workItem from="1560317853197" duration="28238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162589000" />
+    <option name="totallyTimeSpent" value="163196000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -334,14 +287,14 @@
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="TypeScript" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -350,9 +303,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" weight="0.36511377" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" visible="true" weight="0.36511377" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.8294243" visible="true" weight="0.10725894" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.8294243" weight="0.45070422" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.1705757" side_tool="true" weight="0.12459372" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -439,13 +392,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/store/cars/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/store/matches/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -812,7 +758,7 @@
     <entry file="file://$PROJECT_DIR$/project/components/table/TeamRowTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
-          <caret line="77" column="4" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="27" />
+          <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -828,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/screens/TablesScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="46" />
+        <state relative-caret-position="486">
+          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding>
             <element signature="e#389#415#0" expanded="true" />
           </folding>
@@ -846,10 +792,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/screens/MatchesScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+        <state relative-caret-position="501">
+          <caret line="294" column="29" selection-start-line="294" selection-start-column="29" selection-end-line="294" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
