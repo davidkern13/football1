@@ -4,11 +4,7 @@ import {Button, StyleSheet, Text, View, Image,} from 'react-native';
 export default class TeamRow extends React.Component {
     render() {
 
-<<<<<<< HEAD
         let { position, teamLogo, place, win, draw, lose, goals, points } = this.props;
-=======
-        let { teamLogo, place, win, draw, lose, points } = this.props;
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
 
         return (
             <View style={{
@@ -17,12 +13,6 @@ export default class TeamRow extends React.Component {
                 alignItems:'center',
                 flexDirection:'row',
                 height:45,
-<<<<<<< HEAD
-=======
-                paddingRight:15,
-                marginLeft:15,
-                marginRight:15,
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                 backgroundColor:this.props.backgroundColor,
                 elevation:this.props.elevation,
                 borderBottomLeftRadius:this.props.borderBottomLeftRadius,

@@ -30,19 +30,13 @@ export default class TablesScreen extends React.Component {
 
         return teamsArr.map((eachTeam,i)=>{
             return (
-<<<<<<< HEAD
 
                 <View key={i} style={styles.containerWrapTables}>
-=======
-               
-                <View key={i}>    
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                     {
                         i % 4 == 0 &&
                         <Group group={eachTeam.name}></Group>
                     }
 
-<<<<<<< HEAD
                     <TeamRow key={i}
                              position={eachTeam.position}
                              place={eachTeam.team_name}
@@ -56,18 +50,6 @@ export default class TablesScreen extends React.Component {
                              borderBottomLeftRadius={eachTeam.position % 4 !==0? 0 : 8 }
                              borderBottomRightRadius={eachTeam.position % 4 !==0? 0 : 8 }
                              backgroundColor={ eachTeam.position % 2  !== 0 ? '#ffffff':'#f3f4f8' }/>
-=======
-                    <TeamRow key={i} place={eachTeam.team_name}
-                        teamLogo={eachTeam.team_logo}
-                        win={eachTeam.overall.won}
-                        draw={eachTeam.overall.draw}
-                        lose={eachTeam.overall.lost}
-                        points={eachTeam.total.points}
-                        elevation={eachTeam.position % 4  !== 0 ? 0 : 1}
-                        borderBottomLeftRadius={eachTeam.position % 4 !==0? 0 : 8 }
-                        borderBottomRightRadius={eachTeam.position % 4 !==0? 0 : 8 }
-                        backgroundColor={ eachTeam.position % 2  !== 0 ? '#ffffff':'#f3f4f8' }/>
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                 </View>
 
             )
@@ -76,17 +58,10 @@ export default class TablesScreen extends React.Component {
 
     render() {
         const { table } = this.state;
-<<<<<<< HEAD
 
         return (
             <ScrollView style={{flex:1, backgroundColor: '#f4f4f4'}}>
                 <View style={styles.container}>
-=======
-  
-        return (
-            <ScrollView style={{flex:1, backgroundColor: '#f4f4f4'}}>
-                <View style={styles.container}>  
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
                     {
                         table === null ? <Text style={styles.loadingText}>Loading...</Text> :  this.sortTeam(table)
                     }
@@ -105,7 +80,6 @@ const styles = StyleSheet.create({
     loadingText:{
         fontSize:20,
         color:'green',
-<<<<<<< HEAD
     },
     containerWrapTables:{
         marginLeft:10,
@@ -113,8 +87,3 @@ const styles = StyleSheet.create({
     }
 
 });
-=======
-    }
-   
-});
->>>>>>> 285f644603729b95594e2d9571adb2d24b33fcf9
