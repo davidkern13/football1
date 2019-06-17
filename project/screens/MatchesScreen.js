@@ -1,6 +1,8 @@
 import React from 'react';
-import {Platform, Button, StyleSheet, Text, View, Dimensions, ScrollView, Image, Picker} from 'react-native';
+import {Platform, Animated, StyleSheet, Text, View, Dimensions, ScrollView, Image, Picker} from 'react-native';
 import MatchesDate from '../components/matches/MatchesDate';
+import SingleMatch from '../components/matches/SingleMatch';
+import DropDownPicker from '../picker/DropDownPicker';
 import { getApisUrls } from '../api/api';
 const STATUS_BAR_HEIGHT = Platform.select({ ios: 20, android: 24 });
 const width = Dimensions.get('window').width;
@@ -86,98 +88,42 @@ class MatchesScreen extends React.Component {
     renderMatchesDate(todayGameList) {
 
         return todayGameList.map((item, index) => {
-
             // console.log(item);
             return (
                 <View style={styles.containerPerMatch} key={index}>
-                    {
-                        <View style={styles.containerTop}>
-                            <Text style={styles.gameDateText}>{item.gameSDate}</Text>
-                        </View>
-                    }
-
-                    <View style={styles.containerGameRow}>
-                        <View style={styles.matchDisplay}>
-                            <View style={styles.matchRound}>
-                                <Text style={{fontSize:11,color:'#164095',fontWeight:'500'}}>{item.groupName.name}, ROUND {item.gameRound}</Text>
-                            </View>
-                            <View style={styles.matchTeams}>
-                                <View style={styles.teamScore}>
-                                    <View style={styles.leftTeam}>
-                                        <Image style={{width: 30, height: 30, borderRadius: 100}}
-                                               source={{uri: item.gameLocalTeamLogo}}/>
-                                        <Text style={{fontSize:14, marginLeft: 10}}>{item.gameLocalTeamName}</Text>
-                                    </View>
-                                    <View style={styles.scoreWrap}>
-                                        <View style={styles.scoreDisplayContainer}>
-                                            <Text style={{fontSize:14,color:'#a1a1a1'}}>
-                                                {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameLocalteamScore : item.gameLocalteamScore}
-                                                :
-                                                {item.gameStatus === "NS" ? ` - ` : item.gameStatus === "LIVE" ? item.gameVisitorTeamScore : item.gameVisitorTeamScore}
-                                            </Text>
-                                        </View>
-                                    </View>
-                                    <View style={styles.rightTeam}>
-                                        <Text style={{fontSize:14,  marginRight: 10}}>{item.gameVisitorTeamName}</Text>
-                                        <Image style={{width: 30, height: 30, borderRadius: 100}}
-                                               source={{uri: item.gameVisitorTeamLogo}}/>
-                                    </View>
-                                </View>
-                            </View>
-                            { item.gameStatus === "LIVE" &&
-                            <View style={styles.timeContainer}>
-                                <Text style={{color:'#a1a1a1',fontSize:12}}>
-                                    {item.gameTimeMinnute}
-                                    {parseInt(item.gameTimeInjuryTime) >= 0 ? item.gameTimeInjuryTime : ''}
-                                    '</Text>
-                                <Text style={{backgroundColor:'#36bc4f',borderRadius:100,width:6,height:6}}></Text>
-                            </View>
-                            }
-                        </View>
-                    </View>
+                    <SingleMatch
+                        gameStatus={item.gameStatus}
+                        groupName={item.groupName.name}
+                        gameRound={item.gameRound}
+                        gameDate={item.gameSDate}
+                        gameTimeMinutes={item.gameTimeMinnute}
+                        gameTimeInjury={item.gameTimeInjuryTime}
+                        localTeamLogo={item.gameLocalTeamLogo}
+                        visitorTeamLogo={item.gameVisitorTeamLogo}
+                        gameLocalTeamName={item.gameLocalTeamName}
+                        gameVisitorTeamName={item.gameVisitorTeamName}
+                        localTeamScore={item.gameLocalteamScore}
+                        visitorTeamScore={item.gameVisitorTeamScore}
+                    />
                 </View>
             )
         });
     }
-    selectedRound(round){
-
-        fetch('https://bigfiveplus.com/competition/copa-america/get-rounds/' + round, {
-            method: 'GET',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-            },
-        })
-            .then(res=>res.json())
-            .then(res=>this.setState({ todayGameList:res }))
-    }
 
     render() {
+<<<<<<< HEAD
         let { currentRound, todayGameList, roundName } = this.state;
         console.log()
        
 
+=======
+        let { currentRound, todayGameList } = this.state;
+>>>>>>> 645d48594e1f50cc60a8f419e2b94368f1496d2a
 
         return (
-            <ScrollView style={{flex:1,backgroundColor: '#f4f4f4'}}>
-                <View style={styles.dropDownContainer}>
-                    <Picker selectedValue={this.state.currentRound}
-                            mode='dropdown'
-                            style={{
-                                display:'flex',
-                                flexDirection:'row',
-                                justifyContent:'space-between',
-                                alignItems:'center',
-                                width:width,
-                                height:40,
-                            }}
-                            onValueChange={itemValue =>
-                            {
-                                this.setState({currentRound: itemValue});
-                                this.selectedRound(itemValue);
-                            }}>
-                        {
+            <ScrollView style={styles.containerWrap}>
 
+<<<<<<< HEAD
                         }
                         {/* {roundName===null? '': <Picker.Item label={roundName[0]} value={roundName[0]} />} */}
                         {/* {console.log(roundName.length)} */}
@@ -192,11 +138,17 @@ class MatchesScreen extends React.Component {
                         <Picker.Item label="Final - 2019-06-15" value="Final" /> */}
                     </Picker>
                 </View>
+=======
+>>>>>>> 645d48594e1f50cc60a8f419e2b94368f1496d2a
                 <View style={styles.container}>
-
-                    {
-                        todayGameList.length > 0 ? this.renderMatchesDate(todayGameList) : <Text>Loading</Text>
-                    }
+                    <View>
+                        <DropDownPicker
+                            currentRound={currentRound}
+                        />
+                    </View>
+                    <View>
+                        { todayGameList.length > 0 ? this.renderMatchesDate(todayGameList) : <Text>Loading</Text>}
+                    </View>
                 </View>
             </ScrollView>
         );
@@ -204,9 +156,6 @@ class MatchesScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    containerPerMatch:{
-        marginBottom:15,
-    },
     container: {
         display:'flex',
         flexDirection:'column',
@@ -216,109 +165,10 @@ const styles = StyleSheet.create({
         paddingBottom:2,
         marginTop:50,
     },
-    gameDateText:{
-        textAlign:'center',
-        fontSize:14,
-        fontWeight:'600',
-        color:'#bdbdbd',
-        marginLeft:12
-    },
-    dropDownContainer:{
-        backgroundColor:'#ffffff',
-        elevation:.4,
-        paddingLeft:30,
-        paddingRight:30,
-        position:'absolute',
-        top:0,
-        width:'100%',
-        display:'flex',
-        alignItems:'center',
-        flexDirection:'row',
-        justifyContent:'space-between'
-    },
-    containerTop:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'flex-start',
-        alignItems:'flex-end',
-        height:'auto',
-    },
-    containerGameRow: {
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'space-between',
-        backgroundColor:'#ffffff',
-        paddingLeft:4,
-        paddingRight:4,
-        height:'auto',
-        borderRadius:8,
-        margin:3,
-        elevation:1,
-    },
-    timeContainer:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-evenly',
-        alignItems:'center',
-        width:40,
-    },
-    matchDisplay:{
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'space-around',
-        alignItems:'center',
-        height:80,
-        padding:8,
-    },
-    matchRound:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'center',
-        alignItems:'center',
-    },
-    teamScore:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-between',
-        alignItems:'center',
-        width:'100%',
-    },
-    scoreWrap:{
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'space-between',
-        alignItems:'center',
-        width:50,
-    },
-    scoreDisplayContainer:{
-        display:'flex',
-        justifyContent:'center',
-        backgroundColor:'#f4f4f4',
-        alignItems:'center',
-        borderRadius:6,
-        width:45,
-        height:25,
-    },
-    leftTeam:{
-        display:'flex',
-        flexDirection:'row',
-        alignItems:'center',
-        width:120
-    },
-    rightTeam:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'flex-end',
-        alignItems:'center',
-        width:120
-    },
-    matchTeams:{
-        display:'flex',
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent:'center',
-        marginTop: 10
-    },
+    containerWrap:{
+        flex:1,
+        backgroundColor: '#f4f4f4'
+    }
 });
 
 const mapStateToProps = state =>{
