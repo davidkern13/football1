@@ -17,11 +17,11 @@ export default class Group extends React.Component {
                         </View>
                         <View style={[styles.wrapContainerTableRow, styles.flexRowBetween]}>
                             <Text style={styles.titleTableRow}>W</Text>
-                            <Text style={styles.titleTableRow}>D</Text>
+                            <Text style={[styles.titleTableRow,styles.titleTableRowDraw]}>D</Text>
                             <Text style={[styles.titleTableRow,styles.titleTableRowLost]}>L</Text>
                             <Text style={[styles.titleTableRow,styles.titleTableRowGF]}>GF</Text>
                             <Text style={styles.titleTableRow}>GA</Text>
-                            <Text style={styles.titleTableRowPoints}>P</Text>
+                            <Text style={styles.titleTableRow}>P</Text>
                         </View>
                     </View>
                     <View style={styles.teamsContainer}>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     titleTableRowTeam : {
         color:'#a1a1a1',
         fontSize:13,
-        fontWeight:'500',
+        fontWeight:'100',
     },
     titlePosRowTeam : {
         width:12,
@@ -56,13 +56,13 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around',
         flexBasis:'15%',
-        paddingLeft:6,
+        paddingLeft:7,
     },
     wrapContainerTableRow : {
         display:'flex',
         justifyContent:'space-between',
         flexBasis:'40%',
-        marginRight:2,
+        marginRight:3,
     },
     containerTop:{
         alignItems:'center',
@@ -80,23 +80,27 @@ const styles = StyleSheet.create({
     },
     titleTableRow: {
         fontSize:11,
-        color:'#a1a1a1',
+        textAlign:'center',
         fontWeight:'400',
-        textAlign:'center'
-    },
-    titleTableRowLost:{
-        marginLeft:2,
-    },
-    titleTableRowGF:{
-        marginLeft:4,
-    },
-    titleTableRowPoints:{
-        fontSize:11,
+        flexBasis:'15%',
         color:'#a1a1a1',
-        fontWeight:'400',
-        textAlign:'center',        
-        marginRight:2,
     },
+    // titleTableRowLost:{
+    //     marginLeft:7,
+    // },
+    // titleTableRowDraw:{
+    //     marginLeft:2,
+    // },
+    // titleTableRowGF:{
+    //     marginLeft:4,
+    // },
+    // titleTableRowPoints:{
+    //     fontSize:11,
+    //     color:'#a1a1a1',
+    //     fontWeight:'400',
+    //     textAlign:'center',        
+    //     marginRight:2,
+    // },
     teamsContainer:{
         display:'flex',
         flexDirection:'column',

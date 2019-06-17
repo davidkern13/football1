@@ -13,11 +13,13 @@ class MatchesScreen extends React.Component {
         /* default state */
         this.state = {
             currentRound: null,
-            fetchUrls:[
+            fetchRoundUrls:[
                 'https://bigfiveplus.com/competition/copa-america/get-rounds',
                 'https://bigfiveplus.com/get-stages/copa-america',
             ],
             todayGameList: {},
+            roundName:[]
+
         }
 
     }
@@ -26,7 +28,37 @@ class MatchesScreen extends React.Component {
         //call here the method of api from redux
         //setInterval(() => {
          this.callApiMatches();
+         this.fetchRound();
         //}, 60000)
+    }
+    renderDropDown(){
+        const {roundName} = this.state;
+        return roundName.map((item, index) => {
+
+            // console.log(item);
+            return (<Picker.Item key={index} label={item.name === '1' || item.name === '2' ||item.name === '3'?
+                                 item.name+'st Round'+' - '+
+                                 item.start+' / '+item.end : 
+                                 item.name+' '//+item.start+item.end//
+                                } value={item}/>)
+        })
+        }
+        
+    fetchRound=()=>{
+        const {fetchRoundUrls}=this.state;
+        let arr=[];
+
+        Promise.all([
+          fetch(fetchRoundUrls[0]),
+          fetch(fetchRoundUrls[1]),
+      ])
+      .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+      .then(([data1, data2]) => {
+        //   arr.push(data1)
+          data1.map(ob=>{arr.push(ob)});
+          data2.map(ob=>{arr.push(ob)});
+          this.setState({roundName:arr})
+        });
     }
 
     callApiMatches(){
@@ -121,8 +153,9 @@ class MatchesScreen extends React.Component {
     }
 
     render() {
-        let { currentRound, todayGameList } = this.state;
-
+        let { currentRound, todayGameList, roundName } = this.state;
+        console.log()
+       
 
 
         return (
@@ -146,13 +179,17 @@ class MatchesScreen extends React.Component {
                         {
 
                         }
-                        <Picker.Item label="1st Round - 2019-06-15/2019-06-17" value="1"/>
+                        {/* {roundName===null? '': <Picker.Item label={roundName[0]} value={roundName[0]} />} */}
+                        {/* {console.log(roundName.length)} */}
+                        {roundName === [] ? '' : this.renderDropDown() }
+
+                        {/* <Picker.Item label="1st Round - 2019-06-15/2019-06-17" value="1"/>
                         <Picker.Item label="2nd Round - 2019-06-15/2019-06-17" value="2" />
                         <Picker.Item label="3rd Round - 2019-06-15/2019-06-17" value="3" />
                         <Picker.Item label="Quarter Final - 2019-06-15/2019-06-17" value="Quarter Finals" />
                         <Picker.Item label="Semi Final - 2019-06-15/2019-06-17" value="Semi Finals" />
                         <Picker.Item label="3rd place - 2019-06-15" value="3rd place" />
-                        <Picker.Item label="Final - 2019-06-15" value="Final" />
+                        <Picker.Item label="Final - 2019-06-15" value="Final" /> */}
                     </Picker>
                 </View>
                 <View style={styles.container}>

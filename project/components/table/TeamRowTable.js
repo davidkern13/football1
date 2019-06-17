@@ -77,8 +77,10 @@ const styles = StyleSheet.create({
         fontWeight:'700'
     },
     points:{
-        fontSize:12,
-        fontWeight:'100',
+        fontSize:11,
+        textAlign:'center',
+        fontWeight:'400',
+        flexBasis:'15%'
     },
     teamName:{
         display:'flex',

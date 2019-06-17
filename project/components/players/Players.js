@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text , View, StyleSheet, ScrollView,ImageBackground} from "react-native";
+import {Image, Text , View, StyleSheet, ScrollView, ImageBackground} from "react-native";
 
 import {
     createDrawerNavigator,
@@ -10,7 +10,7 @@ import {
     DrawerActions
 } from 'react-navigation';
 
-export default class Player extends React.Component {
+export default class EachPlayer extends React.Component {
 
     constructor() {
         super();
@@ -29,7 +29,7 @@ export default class Player extends React.Component {
                     resizeMode="cover"
                 />
             ),
-            headerStyle: {height: 50},
+            headerStyle: {height: 100},
             headerTintColor: '#FFFFFF',
         };
 
@@ -37,89 +37,91 @@ export default class Player extends React.Component {
 
        console.log(this.props.navigation.state.params.item);
         return(
-        <ScrollView style={styles.scrollViewWrap}>
+        <ScrollView style={{ flex:1,backgroundColor:'#f3f4f8'}}>
             <View style={styles.container}>
-                <ImageBackground source={require('../../img/field_001.png')} resizeMode="cover" style={styles.headerDataContainer}>
+                <View style={styles.headerDataContainer}>
+                {/* <ImageBackground source={require('../img/back.png')} resizeMode="contain" style={styles.headerDataContainer}> */}
                     <View style={styles.personPlayerData}>
                         <Image  source={{uri:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Philippe_Coutinho_850_1692.jpg/220px-20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Philippe_Coutinho_850_1692.jpg'}}
                                 style={styles.playerImg}/>
                         <Text style={styles.playerName}>{this.props.navigation.state.params.item.name}</Text>
                         <Text style={styles.playerRole}>Forward</Text>
                     </View>
-                </ImageBackground>  
+                {/* </ImageBackground>   */}
+                </View>
                 <View style={styles.playerTeamContainer}>
-                    <View style={[styles.playerTeamRow,styles.radiusTop]}>
-                        <Text style={styles.grayTextTitle}>Teams</Text>
+                    <View style={styles.playerTeamRow}>
+                        <Text style={{color:'#a1a1a1',fontWeight:'700'}}>Teams</Text>
                     </View>
                     <View style={[styles.playerTeamRow,styles.grayBackground]}>
                         <Image source={{uri:'https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4e7.png'}}
                                style={styles.playerTeamImg}/>
                         <Text>Manchester United</Text>
                     </View>
-                    <View style={[styles.playerTeamRow,styles.radiusBottom]}>
+                    <View style={styles.playerTeamRow}>
                         <Image source={{uri:'https://banner2.kisspng.com/20180716/isp/kisspng-france-national-football-team-2018-world-cup-frenc-5b4d067312f889.0774670415317745790777.jpg'}}
                                style={styles.playerTeamImg}/>
                         <Text>France</Text>
                     </View>
                 </View>
                 <View style={styles.statsContainer}>
-                    <View style={[styles.statRow,styles.radiusTop]}>
-                        <Text style={styles.grayTextTitle}>Player Statistics</Text>
+                    <View style={styles.statRow}>
+                        <Text style={{color:'#a1a1a1',fontWeight:'700'}}>Player Statistics</Text>
                     </View>
                     <View style={styles.statRow}>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Number</Text>
-                            <Text style={styles.playerCategoryStat}>7</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>7</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Apearances</Text>
-                            <Text style={styles.playerCategoryStat}>6</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>6</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Minutes</Text>
-                            <Text style={styles.playerCategoryStat}>257</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>257</Text>
                         </View>
                     </View>
                     <View style={[styles.statRow,styles.grayBackground]}>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Goals</Text>
-                            <Text style={styles.playerCategoryStat}>7</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>7</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Penalty Goals</Text>
-                            <Text style={styles.playerCategoryStat}>1</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>1</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Assists</Text>
-                            <Text style={styles.playerCategoryStat}>23</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>23</Text>
                         </View>
                     </View>
                     <View style={styles.statRow}>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Shots</Text>
-                            <Text style={styles.playerCategoryStat}>7</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>7</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Shots On Target</Text>
-                            <Text style={styles.playerCategoryStat}>1.4</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>1.4</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Tackles</Text>
-                            <Text style={styles.playerCategoryStat}>17</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>17</Text>
                         </View>
                     </View>
-                    <View style={[styles.statRow,styles.grayBackground,styles.radiusBottom]}>
+                    <View style={[styles.statRow,styles.grayBackground]}>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Passes</Text>
-                            <Text style={styles.playerCategoryStat}>3.6</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>3.6</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Goals Per Match</Text>
-                            <Text style={styles.playerCategoryStat}>2.4</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>2.4</Text>
                         </View>
                         <View style={styles.eachCategoryBox}>
                             <Text style={styles.categoryTitle}>Clearances</Text>
-                            <Text style={styles.playerCategoryStat}>7</Text>
+                            <Text style={{color:'black',fontWeight:'700'}}>7</Text>
                         </View>
                     </View>
                 </View> 
@@ -129,10 +131,6 @@ export default class Player extends React.Component {
     }
 }
 const styles = StyleSheet.create({
-    scrollViewWrap:{
-      flex:1,
-      backgroundColor:'#f3f4f8'
-    },  
   container:{
       display:'flex',
       flexDirection:'column',
@@ -145,11 +143,7 @@ const styles = StyleSheet.create({
       flexDirection:'column',
       justifyContent:'center',
       alignItems:'center',
-      marginBottom:20,
-  },
-  grayTextTitle:{
-      color:'#a1a1a1',
-      fontWeight:'400'
+      elevation:1
   },
   personPlayerData:{
       display:'flex',
@@ -158,26 +152,26 @@ const styles = StyleSheet.create({
 },
   playerImg:{
       borderRadius:100,
-      height:100,
-      width:100,
+      height:110,
+      width:110,
       marginBottom:10,
   },
   playerName:{
-      color:'#ffffff',
-      fontSize:16
+      color:'white',
+      fontSize:18
   },
   playerRole:{
-      color:'black'
+      color:'white'
   },
   playerTeamContainer:{
       margin:20,
       display:'flex',
       flexDirection:'column',
       borderRadius:10,
-      elevation:.7
+      elevation:1
   },
   playerTeamRow:{
-      height:60,
+      height:55,
       backgroundColor:'#ffffff',
       paddingLeft:20,
       display:'flex',
@@ -195,8 +189,8 @@ const styles = StyleSheet.create({
       marginTop:5,
       display:'flex',
       flexDirection:'column',
-      borderRadius:8,
-      elevation:.7
+      borderRadius:10,
+      elevation:1
   },
   statRow:{
       height:55,
@@ -221,17 +215,5 @@ const styles = StyleSheet.create({
   },
   grayBackground:{
       backgroundColor:'#f3f4f8'
-  },
-  playerCategoryStat:{
-      color:'black',
-      fontWeight:'700'
-  },
-  radiusTop:{
-      borderTopLeftRadius:8,
-      borderTopRightRadius:8
-  },
-  radiusBottom:{
-      borderBottomLeftRadius:8,
-      borderBottomRightRadius:8
   }
 });
