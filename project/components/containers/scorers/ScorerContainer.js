@@ -14,8 +14,8 @@ export default class ScorersScreen extends React.Component {
             <View style={styles.container}>
                 <View style={styles.scorerContainer}>
                     <View style={styles.header}>
-                        <Text style={{fontSize:15,color:'gray'}}>Scorers</Text>
-                        <Text style={{fontSize:15,color:'gray'}}>Goals</Text>
+                        <Text style={styles.text}>Scorers</Text>
+                        <Text style={styles.text}>Goals</Text>
                     </View>
                     <View>
                         <Scorer2 place='1' scorerName='Ronaldinho' numOfGoals='2'/>
@@ -39,6 +39,10 @@ const styles = StyleSheet.create({
     scorerContainer:{
         margin:3,
         backgroundColor:'#fff',
+    },
+    text:{
+        fontSize:15,
+        color:'gray'
     },
     header:{
         display:'flex',

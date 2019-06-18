@@ -1,6 +1,6 @@
 //This is an example of React Native Tab
 import React from 'react';
-import {TouchableOpacity, Text, View, Image} from "react-native";
+import {TouchableOpacity, Text, View, Image, StyleSheet} from "react-native";
 //import react in our code.
 //For React Navigation Version 2+
 //import {createStackNavigator, createMaterialTopTabNavigator} from 'react-navigation';
@@ -76,9 +76,10 @@ const App = createStackNavigator({
             // header: ({ goBack }) => ({
             //     left: <Left onPress={goBack} />,
             // }),
-            headerLeft: <TouchableOpacity  onPress={()=> navigation.openDrawer()}><Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}}
-                                                                                          resizeMode="contain"
-                                                                                          style={{ width: 24, height: 24, left: 15 }}
+            headerLeft: <TouchableOpacity  onPress={()=> navigation.openDrawer()}>
+                <Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}}
+                        resizeMode="contain"
+                        style={{ width: 24, height: 24, left: 15 }}
             /></TouchableOpacity>
         }),
     },
@@ -87,3 +88,7 @@ const App = createStackNavigator({
 //export default App;
 //For React Navigation Version 3+
 export default createAppContainer(App);
+
+const styles = StyleSheet.create({
+
+})

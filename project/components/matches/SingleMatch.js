@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View,Image} from 'react-native';
 
-import { Status } from '../modal/emun';
+// import { Status } from '../modal/emun';
 
 export default class SingleMatch extends React.Component {
 

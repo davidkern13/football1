@@ -30,7 +30,7 @@ const BottomNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: () => (
                     // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
-                        <Image  source={require('../img/Matches.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                        <Image  source={require('../img/Matches.png')} resizeMode="contain" style={styles.logoSize}/>
                     // </TouchableOpacity>
                 )
               },
@@ -40,7 +40,7 @@ const BottomNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: () => (
                     // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
-                        <Image  source={require('../img/News.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                        <Image  source={require('../img/News.png')} resizeMode="contain" style={styles.logoSize}/>
                     // </TouchableOpacity>
                 )
               },
@@ -50,7 +50,7 @@ const BottomNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: () => (
                     // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
-                        <Image  source={require('../img/Tables.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                        <Image  source={require('../img/Tables.png')} resizeMode="contain" style={styles.logoSize}/>
                     // </TouchableOpacity> */}
                 )
               },
@@ -60,7 +60,7 @@ const BottomNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: () => (
                     // <TouchableOpacity  onPress={()=> navigation.openDrawer()} >
-                        <Image source={require('../img/Scorers.png')} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                        <Image source={require('../img/Scorers.png')} resizeMode="contain" style={styles.logoSize }/>
                     // </TouchableOpacity>
                 )
               },
@@ -91,11 +91,13 @@ const App = createStackNavigator({
                 }}
                 >
                         <TouchableOpacity  onPress={()=> navigation.openDrawer()} style={{position:'absolute',left:10}}>
-                            <Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}} resizeMode="contain" style={{ width: 24, height: 24  }}/>
+                            <Image  source={{uri: "https://img.icons8.com/color/48/ffffff/menu.png"}} resizeMode="contain" style={styles.logoSize}/>
                         </TouchableOpacity>
 
                         <TouchableOpacity  onPress={()=> navigation.openDrawer()}>
-                            <Image  source={{uri: "http://www.up2me.co.il/images/85296732.png?fbclid=IwAR3WVmuh6K4l3HB4v0Y0dU-fwtPwV2_tqXeWzR8V42qsoxxnn3uL_siJ0vM"}} resizeMode="contain" style={{ width: 105, height: 50 }}/>
+                            <Image  source={{uri: "http://www.up2me.co.il/images/85296732.png?fbclid=IwAR3WVmuh6K4l3HB4v0Y0dU-fwtPwV2_tqXeWzR8V42qsoxxnn3uL_siJ0vM"}} 
+                                    resizeMode="contain" 
+                                    style={{ width: 105, height: 50 }}/>
                         </TouchableOpacity>
 
                     {/* </View> */}
@@ -115,7 +117,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
                     />
                 ),
@@ -126,7 +128,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={require('../img/News.png')}
                     />
                 ),
@@ -137,7 +139,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={require('../img/Matches.png')}
                     />
                 ),
@@ -148,7 +150,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={require('../img/Tables.png')}
                     />
                 ),
@@ -159,7 +161,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={require('../img/Scorers.png')}
                     />
                 ),
@@ -170,7 +172,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
                     />
                 ),
@@ -181,7 +183,7 @@ const MyApp = createDrawerNavigator({
             navigationOptions: {
                 drawerIcon: (
                     <Image
-                        style={{ width: 24, height: 24 }}
+                        style={styles.logoSize}
                         source={{uri: "https://img.icons8.com/material/100/000000/home-page.png"}}
                     />
                 ),
@@ -200,4 +202,10 @@ const MyApp = createDrawerNavigator({
 );
 
 // export default createAppContainer(MyApp);
+const styles = StyleSheet.create({
+    logoSize:{
+        height:24,
+        width:24
+    }
+})
 export const AppNavigator = createAppContainer(MyApp);

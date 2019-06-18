@@ -43,7 +43,7 @@ export default class NewsScreen extends React.Component {
         const { news, firstNews} = this.state;
 
         return (
-        <ScrollView style={{flex:1, backgroundColor: '#f4f4f4'}}>
+        <ScrollView style={styles.scrollWrap}>
                 <View style={styles.container}>
                     {/*<EachNews />*/}
                         {
@@ -69,6 +69,10 @@ export default class NewsScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    scrollWrap:{
+        flex:1, 
+        backgroundColor: '#f4f4f4'
+    },
     container: {
         display:'flex',
         flexDirection:'column',

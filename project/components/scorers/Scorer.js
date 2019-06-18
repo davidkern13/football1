@@ -62,16 +62,16 @@ class Scorer extends React.Component {
         const {scorer}=this.state;
 
         return (
-            <ScrollView style={{flex:1,backgroundColor:'#f4f4f4'}}>
+            <ScrollView style={styles.scrollWrap}>
                 <View style={styles.container}>
                     <View style={styles.statsContainer}>
                         <View style={styles.headerContainer}>
                             <View style={styles.leftHeader}>
                                 <Text style={styles.rankText}>Rank</Text>
-                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Player</Text>
+                                <Text style={styles.titleText}>Player</Text>
                             </View>
                             <View style={styles.rightHeader}>
-                                <Text style={{color:'#bdbdbd',fontWeight:'600',fontSize:15}}>Goals</Text>
+                                <Text style={styles.titleText}>Goals</Text>
                             </View>
                         </View>
                         {
@@ -141,7 +141,16 @@ export default App = createStackNavigator(
 );
 
 const styles = StyleSheet.create({
+    scrollWrap:{
+        flex:1,
+        backgroundColor:'#f4f4f4'
+    },
     container: {
+    },
+    titleText:{
+        color:'#bdbdbd',
+        fontWeight:'600',
+        fontSize:15
     },
     statsContainer:{
         display:'flex',

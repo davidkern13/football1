@@ -38,11 +38,11 @@ class MatchesScreen extends React.Component {
         return roundName.map((item, index) => {
 
             // console.log(item);
-            return (<Picker.Item key={index} label={item.name === '1' || item.name === '2' ||item.name === '3'?
+            return (<Picker.Item key={index} label={item.name === '1' || item.name === '2' || item.name === '3'?
                                  item.name+'st Round'+' - '+
                                  item.start+' / '+item.end : 
-                                 item.name+' '//+item.start+item.end//
-                                } value={item}/>)
+                                 item.name+' '//+item.start+item.end// 
+                                }value={item}/>)
         })
         }
         
@@ -111,35 +111,14 @@ class MatchesScreen extends React.Component {
     }
 
     render() {
-<<<<<<< HEAD
         let { currentRound, todayGameList, roundName } = this.state;
         console.log()
        
 
-=======
-        let { currentRound, todayGameList } = this.state;
->>>>>>> 645d48594e1f50cc60a8f419e2b94368f1496d2a
 
         return (
             <ScrollView style={styles.containerWrap}>
 
-<<<<<<< HEAD
-                        }
-                        {/* {roundName===null? '': <Picker.Item label={roundName[0]} value={roundName[0]} />} */}
-                        {/* {console.log(roundName.length)} */}
-                        {roundName === [] ? '' : this.renderDropDown() }
-
-                        {/* <Picker.Item label="1st Round - 2019-06-15/2019-06-17" value="1"/>
-                        <Picker.Item label="2nd Round - 2019-06-15/2019-06-17" value="2" />
-                        <Picker.Item label="3rd Round - 2019-06-15/2019-06-17" value="3" />
-                        <Picker.Item label="Quarter Final - 2019-06-15/2019-06-17" value="Quarter Finals" />
-                        <Picker.Item label="Semi Final - 2019-06-15/2019-06-17" value="Semi Finals" />
-                        <Picker.Item label="3rd place - 2019-06-15" value="3rd place" />
-                        <Picker.Item label="Final - 2019-06-15" value="Final" /> */}
-                    </Picker>
-                </View>
-=======
->>>>>>> 645d48594e1f50cc60a8f419e2b94368f1496d2a
                 <View style={styles.container}>
                     <View>
                         <DropDownPicker

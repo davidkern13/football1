@@ -10,7 +10,7 @@ export default class MatchesDate extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.containerTop}>
-                    <Text style={{textAlign:'center',fontSize:14,fontWeight:'600',color:'#bdbdbd',marginLeft:12}}>{this.props.date}</Text>
+                    <Text style={styles.dateAlignment}>{this.props.date}</Text>
                 </View>
                <MatchesBox team1={this.props.team1} team2={this.props.team2} 
                            scoreTeam1={this.props.scoreTeam1} scoreTeam2={this.props.scoreTeam2} 
@@ -38,5 +38,12 @@ const styles = StyleSheet.create({
         alignItems:'flex-end',
         height:40,
     },
+    dateAlignment:{
+        textAlign:'center',
+        fontSize:14,
+        fontWeight:'600',
+        color:'#bdbdbd',
+        marginLeft:12
+    }
     
 });

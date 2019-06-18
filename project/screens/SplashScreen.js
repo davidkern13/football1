@@ -43,8 +43,8 @@ export default class SplashScreen extends React.Component {
         return (
                 <ImageBackground  source={require('../img/splash/Splash.jpg')} style={{flex:1}}>
                     <View style={styles.container}>
-                        <Image source={require('../img/splash/copa-america-logo.png')} style={{height:60,width:250}} />
-                        <Image source={require('../img/Big5plus.png')} resizeMode="contain" style={{ width: 80, height: 80,position:'absolute',bottom:30 }}/>
+                        <Image source={require('../img/splash/copa-america-logo.png')} style={styles.copaLogo} />
+                        <Image source={require('../img/Big5plus.png')} resizeMode="contain" style={styles.bigFivePlusLogo}/>
                     </View>
                 </ImageBackground>
         );
@@ -52,6 +52,7 @@ export default class SplashScreen extends React.Component {
 }
 
 var styles = StyleSheet.create({
+    
     container: {
         display:'flex',
         flexDirection:'column',
@@ -59,6 +60,16 @@ var styles = StyleSheet.create({
         height:'100%',
         justifyContent:'space-evenly',
     },
+    copaLogo:{
+        height:60,
+        width:250
+    },
+    bigFivePlusLogo:{
+      width: 80,
+      height: 80,
+      position:'absolute',
+      bottom:30
+}
 });
 
 
